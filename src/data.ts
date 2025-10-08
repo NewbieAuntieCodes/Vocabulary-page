@@ -6,6 +6,9 @@ import React from 'react';
 const ColorsTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "url(#paint_palette)" }), React.createElement('circle', { cx: "35", cy: "30", r: "10", fill: "#E74C3C", stroke: "white", strokeWidth: "2" }), React.createElement('circle', { cx: "60", cy: "25", r: "12", fill: "#3498DB", stroke: "white", strokeWidth: "2" }), React.createElement('circle', { cx: "85", cy: "30", r: "10", fill: "#F1C40F", stroke: "white", strokeWidth: "2" }), React.createElement('circle', { cx: "45", cy: "55", r: "12", fill: "#2ECC71", stroke: "white", strokeWidth: "2" }), React.createElement('circle', { cx: "75", cy: "55", r: "12", fill: "#9B59B6", stroke: "white", strokeWidth: "2" }), React.createElement('defs', null, React.createElement('linearGradient', { id: "paint_palette", x1: "0", y1: "0", x2: "120", y2: "80", gradientUnits: "userSpaceOnUse" }, React.createElement('stop', { stopColor: "#F0F3FF" }), React.createElement('stop', { offset: "1", stopColor: "#E2E8FF" }))));
 // FIX: Converted to React.createElement to be valid in a .ts file.
 const NumbersTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#FFF9E6" }), React.createElement('text', { x: "25", y: "55", fontFamily: "sans-serif", fontSize: "40", fill: "#FFAB00", fontWeight: "bold" }, "1"), React.createElement('text', { x: "50", y: "55", fontFamily: "sans-serif", fontSize: "40", fill: "#FFAB00", fontWeight: "bold" }, "2"), React.createElement('text', { x: "75", y: "55", fontFamily: "sans-serif", fontSize: "40", fill: "#FFAB00", fontWeight: "bold" }, "3"));
+const DaysTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { x: "0.5", y: "0.5", width: "119", height: "79", rx: "11.5", fill: "#E9F8F1", stroke: "#D4F1E4" }), React.createElement('rect', { x: "25", y: "20", width: "70", height: "10", rx: "2", fill: "#F56565" }), React.createElement('text', { x: "35", y: "55", fontFamily: "sans-serif", fontSize: "12", fill: "#4A5568" }, "MON"), React.createElement('text', { x: "60", y: "55", fontFamily: "sans-serif", fontSize: "12", fill: "#4A5568" }, "TUE"), React.createElement('text', { x: "85", y: "55", fontFamily: "sans-serif", fontSize: "12", fill: "#4A5568" }, "WED"));
+const MonthsTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#EBF4FF" }), React.createElement('path', { d: "M30 25H90V55H30V25Z", fill: "white", stroke: "#A3BFDB", strokeWidth: "2" }), React.createElement('path', { d: "M30 35H90", stroke: "#A3BFDB", strokeWidth: "2" }), React.createElement('text', { x: "60", y: "32", textAnchor: "middle", fontFamily: "sans-serif", fontSize: "10", fill: "#4299E1", fontWeight: "bold" }, "月份"));
+
 
 // FIX: Converted to React.createElement to be valid in a .ts file.
 const RedIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M50,90 C85,90 90,65 90,50 C90,25 75,10 50,10 C25,10 10,25 10,50 C10,65 15,90 50,90 Z", fill: "#E74C3C" }), React.createElement('path', { d: "M60 18 C 58 10, 52 8, 50 12 C 48 8, 42 10, 40 18", stroke: "#6D4C41", strokeWidth: "4", fill: "none", strokeLinecap: "round" }));
@@ -56,6 +59,29 @@ const TenIllustration: React.FC = () => React.createElement('svg', { viewBox: "0
 const ElevenIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('text', { x: "50", y: "70", textAnchor: "middle", fontSize: "60", fontWeight: "bold", fill: "#34495E" }, "11"));
 // FIX: Converted to React.createElement to be valid in a .ts file.
 const TwelveIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('text', { x: "50", y: "70", textAnchor: "middle", fontSize: "60", fontWeight: "bold", fill: "#34495E" }, "12"));
+
+const DailyCalendarIllustration: React.FC<{ day: string, color: string }> = ({ day, color }) => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { x: "15", y: "15", width: "70", height: "70", rx: "8", fill: "#fff", stroke: "#ccc", strokeWidth: "2" }), React.createElement('rect', { x: "15", y: "15", width: "70", height: "20", rx: "8", ry: "8", fill: color }), React.createElement('circle', { cx: "25", cy: "25", r: "3", fill: "white" }), React.createElement('circle', { cx: "35", cy: "25", r: "3", fill: "white" }), React.createElement('text', { x: "50", y: "68", textAnchor: "middle", fontSize: "30", fontWeight: "bold", fill: "#34495E" }, day));
+const MondayIllustration: React.FC = () => React.createElement(DailyCalendarIllustration, { day: 'Mon', color: '#E74C3C' });
+const TuesdayIllustration: React.FC = () => React.createElement(DailyCalendarIllustration, { day: 'Tue', color: '#E67E22' });
+const WednesdayIllustration: React.FC = () => React.createElement(DailyCalendarIllustration, { day: 'Wed', color: '#F1C40F' });
+const ThursdayIllustration: React.FC = () => React.createElement(DailyCalendarIllustration, { day: 'Thu', color: '#2ECC71' });
+const FridayIllustration: React.FC = () => React.createElement(DailyCalendarIllustration, { day: 'Fri', color: '#3498DB' });
+const SaturdayIllustration: React.FC = () => React.createElement(DailyCalendarIllustration, { day: 'Sat', color: '#9B59B6' });
+const SundayIllustration: React.FC = () => React.createElement(DailyCalendarIllustration, { day: 'Sun', color: '#34495E' });
+
+const MonthlyCalendarIllustration: React.FC<{ month: string, day: string, icon: string, color: string }> = ({ month, day, icon, color }) => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { x: "10", y: "10", width: "80", height: "80", rx: "10", fill: "#fff", stroke: "#ddd", strokeWidth: "2" }), React.createElement('rect', { x: "10", y: "10", width: "80", height: "25", rx: "10", ry: "10", fill: color }), React.createElement('text', { x: "50", y: "28", textAnchor: "middle", fontSize: "14", fontWeight: "bold", fill: "#fff" }, month), React.createElement('text', { x: "50", y: "65", textAnchor: "middle", fontSize: "32", fontWeight: "bold", fill: "#34495E" }, day), React.createElement('text', { x: "78", y: "80", textAnchor: "end", fontSize: "18" }, icon));
+const JanuaryIllustration: React.FC = () => React.createElement(MonthlyCalendarIllustration, { month: '一月', day: '1', icon: '❄️', color: '#3498DB' });
+const FebruaryIllustration: React.FC = () => React.createElement(MonthlyCalendarIllustration, { month: '二月', day: '14', icon: '❤️', color: '#E91E63' });
+const MarchIllustration: React.FC = () => React.createElement(MonthlyCalendarIllustration, { month: '三月', day: '17', icon: '🍀', color: '#2ECC71' });
+const AprilIllustration: React.FC = () => React.createElement(MonthlyCalendarIllustration, { month: '四月', day: '1', icon: '🌧️', color: '#5DADE2' });
+const MayIllustration: React.FC = () => React.createElement(MonthlyCalendarIllustration, { month: '五月', day: '5', icon: '🌸', color: '#F472B6' });
+const JuneIllustration: React.FC = () => React.createElement(MonthlyCalendarIllustration, { month: '六月', day: '21', icon: '☀️', color: '#F1C40F' });
+const JulyIllustration: React.FC = () => React.createElement(MonthlyCalendarIllustration, { month: '七月', day: '4', icon: '🎆', color: '#E74C3C' });
+const AugustIllustration: React.FC = () => React.createElement(MonthlyCalendarIllustration, { month: '八月', day: '15', icon: '🏖️', color: '#F39C12' });
+const SeptemberIllustration: React.FC = () => React.createElement(MonthlyCalendarIllustration, { month: '九月', day: '22', icon: '🍂', color: '#E67E22' });
+const OctoberIllustration: React.FC = () => React.createElement(MonthlyCalendarIllustration, { month: '十月', day: '31', icon: '🎃', color: '#D35400' });
+const NovemberIllustration: React.FC = () => React.createElement(MonthlyCalendarIllustration, { month: '十一月', day: '25', icon: '🦃', color: '#8D6E63' });
+const DecemberIllustration: React.FC = () => React.createElement(MonthlyCalendarIllustration, { month: '十二月', day: '25', icon: '🎄', color: '#27AE60' });
 
 export interface Word {
   word: string;
@@ -154,6 +180,43 @@ export const wordLists: WordList[] = [
       { word: 'ten', phonetic: '/ten/', definition: '十', example: 'I have ten fingers.', illustration: TenIllustration },
       { word: 'eleven', phonetic: '/ɪˈlevən/', definition: '十一', example: 'The team has eleven players.', illustration: ElevenIllustration },
       { word: 'twelve', phonetic: '/twelv/', definition: '十二', example: 'There are twelve months in a year.', illustration: TwelveIllustration },
+    ],
+  },
+  {
+    id: 'days-of-week',
+    title: '星期 (Days of the Week)',
+    description: '学习从周一到周日的单词。',
+    illustration: DaysTopicIllustration,
+    theme: 'learn',
+    words: [
+        { word: 'Monday', phonetic: '/ˈmʌndeɪ/', definition: '星期一', example: 'The week starts on Monday.', illustration: MondayIllustration },
+        { word: 'Tuesday', phonetic: '/ˈtuːzdeɪ/', definition: '星期二', example: 'We have a meeting on Tuesday.', illustration: TuesdayIllustration },
+        { word: 'Wednesday', phonetic: '/ˈwenzdeɪ/', definition: '星期三', example: 'Wednesday is the middle of the week.', illustration: WednesdayIllustration },
+        { word: 'Thursday', phonetic: '/ˈθɜːrzdeɪ/', definition: '星期四', example: 'Let\'s go out on Thursday.', illustration: ThursdayIllustration },
+        { word: 'Friday', phonetic: '/ˈfraɪdeɪ/', definition: '星期五', example: 'I love Fridays!', illustration: FridayIllustration },
+        { word: 'Saturday', phonetic: '/ˈsætərdeɪ/', definition: '星期六', example: 'Saturday is part of the weekend.', illustration: SaturdayIllustration },
+        { word: 'Sunday', phonetic: '/ˈsʌndeɪ/', definition: '星期日', example: 'Sunday is a day of rest.', illustration: SundayIllustration },
+    ],
+  },
+  {
+    id: 'months-of-year',
+    title: '月份 (Months of the Year)',
+    description: '学习从一月到十二月的单词。',
+    illustration: MonthsTopicIllustration,
+    theme: 'learn',
+    words: [
+        { word: 'January', phonetic: '/ˈdʒænjueri/', definition: '一月', example: 'New Year\'s Day is in January.', illustration: JanuaryIllustration },
+        { word: 'February', phonetic: '/ˈfebrueri/', definition: '二月', example: 'Valentine\'s Day is in February.', illustration: FebruaryIllustration },
+        { word: 'March', phonetic: '/mɑːrtʃ/', definition: '三月', example: 'Spring begins in March.', illustration: MarchIllustration },
+        { word: 'April', phonetic: '/ˈeɪprəl/', definition: '四月', example: 'April showers bring May flowers.', illustration: AprilIllustration },
+        { word: 'May', phonetic: '/meɪ/', definition: '五月', example: 'My birthday is in May.', illustration: MayIllustration },
+        { word: 'June', phonetic: '/dʒuːn/', definition: '六月', example: 'Summer starts in June.', illustration: JuneIllustration },
+        { word: 'July', phonetic: '/dʒʊˈlaɪ/', definition: '七月', example: 'It is very hot in July.', illustration: JulyIllustration },
+        { word: 'August', phonetic: '/ˈɔːɡəst/', definition: '八月', example: 'We go on vacation in August.', illustration: AugustIllustration },
+        { word: 'September', phonetic: '/sepˈtembər/', definition: '九月', example: 'School starts in September.', illustration: SeptemberIllustration },
+        { word: 'October', phonetic: '/ɑːkˈtoʊbər/', definition: '十月', example: 'Halloween is in October.', illustration: OctoberIllustration },
+        { word: 'November', phonetic: '/noʊˈvembər/', definition: '十一月', example: 'Thanksgiving is in November.', illustration: NovemberIllustration },
+        { word: 'December', phonetic: '/dɪˈsembər/', definition: '十二月', example: 'Christmas is in December.', illustration: DecemberIllustration },
     ],
   },
 ];
