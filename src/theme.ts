@@ -1,3 +1,6 @@
+// FIX: Removed the redundant side-effect import for 'styled-components'.
+// The file is already a module because of other imports and exports, and removing this line
+// resolves the module augmentation error.
 import { createGlobalStyle } from 'styled-components';
 
 export const theme = {
