@@ -22,7 +22,8 @@ const createGameQuestions = (topic: WordList): Question[] => {
     const shuffledWords = shuffleArray([...topic.words]);
     return shuffledWords.map(correctWord => {
         const otherWords = topic.words.filter(w => w.word !== correctWord.word);
-        const incorrectOptions = shuffleArray(otherWords).slice(0, 3).map(w => w.word);
+        const numOptions = Math.min(3, otherWords.length); // Ensure we don't need more options than available words
+        const incorrectOptions = shuffleArray(otherWords).slice(0, numOptions).map(w => w.word);
         const options = shuffleArray([correctWord.word, ...incorrectOptions]);
         return {
             word: correctWord,
@@ -59,7 +60,11 @@ const Game: React.FC<GameProps> = ({ topic, gameMode, onGameChange }) => {
     const [isFinished, setIsFinished] = useState(false);
 
     const resetGame = useCallback(() => {
-        setQuestions(createGameQuestions(topic));
+        if (topic.words.length > 0) {
+            setQuestions(createGameQuestions(topic));
+        } else {
+            setQuestions([]);
+        }
         setCurrentIndex(0);
         setSelectedOption(null);
         setIsCorrect(null);
@@ -97,6 +102,10 @@ const Game: React.FC<GameProps> = ({ topic, gameMode, onGameChange }) => {
             }
         }, 500);
     };
+
+    if (topic.words.length === 0) {
+        return <GameCard><p>请至少选择一个单词开始练习！</p></GameCard>
+    }
 
     if (questions.length === 0) {
         return <GameCard><p>正在加载游戏...</p></GameCard>;
@@ -162,11 +171,11 @@ const Game: React.FC<GameProps> = ({ topic, gameMode, onGameChange }) => {
 };
 
 
-const PracticePage: React.FC<{ topicId: string, navigateTo: (page: Page) => void }> = ({ topicId, navigateTo }) => {
+const PracticePage: React.FC<{ topicId: string, words: Word[], navigateTo: (page: Page) => void }> = ({ topicId, words, navigateTo }) => {
     const [gameMode, setGameMode] = useState<GameMode>('image');
-    const topic = wordLists.find(list => list.id === topicId);
+    const originalTopic = wordLists.find(list => list.id === topicId);
 
-    if (!topic) {
+    if (!originalTopic) {
         return (
             <PageContainer>
                 <p>主题未找到！</p>
@@ -174,6 +183,8 @@ const PracticePage: React.FC<{ topicId: string, navigateTo: (page: Page) => void
             </PageContainer>
         );
     }
+    
+    const activityTopic: WordList = { ...originalTopic, words };
 
     return (
         <PageContainer>
@@ -181,7 +192,7 @@ const PracticePage: React.FC<{ topicId: string, navigateTo: (page: Page) => void
                  <BackButton onClick={() => navigateTo('home')} aria-label="返回主页">
                     <BackArrowIcon />
                 </BackButton>
-                <h1>{topic.title}</h1>
+                <h1>{activityTopic.title}</h1>
             </PageHeader>
             <main>
                 <GameTabs>
@@ -193,7 +204,7 @@ const PracticePage: React.FC<{ topicId: string, navigateTo: (page: Page) => void
                     </TabButton>
                 </GameTabs>
 
-                <Game key={gameMode} topic={topic} gameMode={gameMode} onGameChange={setGameMode} />
+                <Game key={`${gameMode}-${topicId}`} topic={activityTopic} gameMode={gameMode} onGameChange={setGameMode} />
             </main>
         </PageContainer>
     );

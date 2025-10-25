@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from 'styled-components';
-import { wordLists } from '../data';
+import { topicCategories } from '../data';
 import { Page } from '../types';
 
 const HeroIllustration = () => (
@@ -22,10 +22,10 @@ const HeroIllustration = () => (
 );
 
 interface HomePageProps {
-    navigateToActivity: (topicId: string, page: Page) => void;
+    navigateToWordSelection: (topicId: string) => void;
 }
 
-const HomePage: React.FC<HomePageProps> = ({ navigateToActivity }) => {
+const HomePage: React.FC<HomePageProps> = ({ navigateToWordSelection }) => {
     return (
         <HomeContainer>
             <HeroSection>
@@ -37,19 +37,24 @@ const HomePage: React.FC<HomePageProps> = ({ navigateToActivity }) => {
                     <HeroIllustration />
                 </HeroIllustrationWrapper>
             </HeroSection>
-            <TopicsGrid>
-                {wordLists.map(list => (
-                    <TopicCard key={list.id} onClick={() => navigateToActivity(list.id, list.theme as Page)} $theme={list.theme}>
-                        <IllustrationContainer>
-                            {list.illustration && <list.illustration />}
-                        </IllustrationContainer>
-                        <CardContent>
-                            <h2>{list.title}</h2>
-                            <p>{list.description}</p>
-                        </CardContent>
-                    </TopicCard>
-                ))}
-            </TopicsGrid>
+            {topicCategories.map(category => (
+                <CategorySection key={category.title}>
+                    <CategoryTitle>{category.title}</CategoryTitle>
+                    <TopicsGrid>
+                        {category.topics.map(list => (
+                            <TopicCard key={list.id} onClick={() => navigateToWordSelection(list.id)} $theme={list.theme}>
+                                <IllustrationContainer>
+                                    {list.illustration && <list.illustration />}
+                                </IllustrationContainer>
+                                <CardContent>
+                                    <h2>{list.title}</h2>
+                                    <p>{list.description}</p>
+                                </CardContent>
+                            </TopicCard>
+                        ))}
+                    </TopicsGrid>
+                </CategorySection>
+            ))}
         </HomeContainer>
     );
 };
@@ -113,7 +118,30 @@ const HeroIllustrationWrapper = styled.div`
     }
 `;
 
-const TopicsGrid = styled.main`
+const CategorySection = styled.section`
+    margin-bottom: 4rem;
+
+    &:last-of-type {
+        margin-bottom: 2rem;
+    }
+`;
+
+const CategoryTitle = styled.h2`
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: ${({ theme }) => theme.colors.header};
+    margin-bottom: 2rem;
+    text-align: left;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+`;
+
+const TopicsGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;

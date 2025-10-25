@@ -6,8 +6,23 @@ import React from 'react';
 const ColorsTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "url(#paint_palette)" }), React.createElement('circle', { cx: "35", cy: "30", r: "10", fill: "#E74C3C", stroke: "white", strokeWidth: "2" }), React.createElement('circle', { cx: "60", cy: "25", r: "12", fill: "#3498DB", stroke: "white", strokeWidth: "2" }), React.createElement('circle', { cx: "85", cy: "30", r: "10", fill: "#F1C40F", stroke: "white", strokeWidth: "2" }), React.createElement('circle', { cx: "45", cy: "55", r: "12", fill: "#2ECC71", stroke: "white", strokeWidth: "2" }), React.createElement('circle', { cx: "75", cy: "55", r: "12", fill: "#9B59B6", stroke: "white", strokeWidth: "2" }), React.createElement('defs', null, React.createElement('linearGradient', { id: "paint_palette", x1: "0", y1: "0", x2: "120", y2: "80", gradientUnits: "userSpaceOnUse" }, React.createElement('stop', { stopColor: "#F0F3FF" }), React.createElement('stop', { offset: "1", stopColor: "#E2E8FF" }))));
 // FIX: Converted to React.createElement to be valid in a .ts file.
 const NumbersTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#FFF9E6" }), React.createElement('text', { x: "25", y: "55", fontFamily: "sans-serif", fontSize: "40", fill: "#FFAB00", fontWeight: "bold" }, "1"), React.createElement('text', { x: "50", y: "55", fontFamily: "sans-serif", fontSize: "40", fill: "#FFAB00", fontWeight: "bold" }, "2"), React.createElement('text', { x: "75", y: "55", fontFamily: "sans-serif", fontSize: "40", fill: "#FFAB00", fontWeight: "bold" }, "3"));
-const DaysTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { x: "0.5", y: "0.5", width: "119", height: "79", rx: "11.5", fill: "#E9F8F1", stroke: "#D4F1E4" }), React.createElement('rect', { x: "25", y: "20", width: "70", height: "10", rx: "2", fill: "#F56565" }), React.createElement('text', { x: "35", y: "55", fontFamily: "sans-serif", fontSize: "12", fill: "#4A5568" }, "MON"), React.createElement('text', { x: "60", y: "55", fontFamily: "sans-serif", fontSize: "12", fill: "#4A5568" }, "TUE"), React.createElement('text', { x: "85", y: "55", fontFamily: "sans-serif", fontSize: "12", fill: "#4A5568" }, "WED"));
-const MonthsTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#EBF4FF" }), React.createElement('path', { d: "M30 25H90V55H30V25Z", fill: "white", stroke: "#A3BFDB", strokeWidth: "2" }), React.createElement('path', { d: "M30 35H90", stroke: "#A3BFDB", strokeWidth: "2" }), React.createElement('text', { x: "60", y: "32", textAnchor: "middle", fontFamily: "sans-serif", fontSize: "10", fill: "#4299E1", fontWeight: "bold" }, "月份"));
+const DaysTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
+    React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#E8F5FF" }),
+    React.createElement('rect', { x: "15", y: "18", width: "90", height: "44", rx: "6", fill: "white", stroke: "#B3D9FF", strokeWidth: "2" }),
+    React.createElement('line', { x1: "15", y1: "34", x2: "105", y2: "34", stroke: "#E0E0E0" }),
+    React.createElement('line', { x1: "15", y1: "48", x2: "105", y2: "48", stroke: "#E0E0E0" }),
+    React.createElement('text', { x: "22", y: "29", fontFamily: "sans-serif", fontSize: "9", fill: "#E74C3C", fontWeight: "bold" }, "Mon"),
+    React.createElement('text', { x: "22", y: "43", fontFamily: "sans-serif", fontSize: "9", fill: "#3498DB", fontWeight: "bold" }, "Tue"),
+    React.createElement('text', { x: "22", y: "57", fontFamily: "sans-serif", fontSize: "9", fill: "#2ECC71", fontWeight: "bold" }, "Wed")
+);
+const MonthsTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
+    React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#FFF4E8" }),
+    React.createElement('rect', { x: "25", y: "15", width: "70", height: "50", rx: "8", fill: "white", stroke: "#FFDDC2", strokeWidth: "2" }),
+    React.createElement('rect', { x: "25", y: "15", width: "70", height: "15", rx: "4", ry: "4", fill: "#FFAB00" }),
+    React.createElement('text', { x: "48", y: "26", fontFamily: "sans-serif", fontSize: "9", fill: "white", fontWeight: "bold" }, "AUGUST"),
+    React.createElement('circle', { cx: "75", cy: "45", r: "8", fill: "#FFAB00", fillOpacity: "0.3" }),
+    React.createElement('text', { x: "71", y: "48", fontFamily: "sans-serif", fontSize: "9", fill: "#D35400", fontWeight: "bold" }, "23")
+);
 const FruitsTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#F1FEE7" }), React.createElement('path', { d: "M30 45 C 20 45, 25 25, 30 25 C 35 25, 40 45, 30 45 Z", fill: "#E74C3C" }), React.createElement('path', { d: "M55 30 C 50 20, 65 20, 60 30 C 70 50, 45 50, 55 30 Z", fill: "#F1C40F" }), React.createElement('circle', { cx: "85", cy: "35", r: "12", fill: "#E67E22" }), React.createElement('path', { d: "M70 55 C 65 50, 75 50, 70 55 C 80 70, 60 70, 70 55 Z", fill: "#2ECC71" }));
 const VegetablesTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#F0FFF4" }), React.createElement('path', { d: "M30 60 L 40 40 L 50 60 Z", fill: "#F39C12" }), React.createElement('circle', { cx: "65", cy: "50", r: "15", fill: "#E74C3C" }), React.createElement('ellipse', { cx: "85", cy: "55", rx: "10", ry: "20", fill: "#8E44AD" }));
 const FoodTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#FEF4E8" }), React.createElement('path', { d: "M25 55 L 45 30 L 65 55 Z", fill: "#F39C12" }), React.createElement('rect', { x: "55", y: "45", width: "40", height: "8", rx: "4", fill: "#D2B48C" }), React.createElement('rect', { x: "55", y: "35", width: "40", height: "8", rx: "4", fill: "#E67E22" }));
@@ -16,6 +31,14 @@ const ClothesTopicIllustration: React.FC = () => React.createElement('svg', { wi
 const FurnitureTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#F8F3E8" }), React.createElement('rect', { x: "20", y: "40", width: "50", height: "10", fill: "#8D6E63" }), React.createElement('rect', { x: "30", y: "50", width: "5", height: "15", fill: "#8D6E63" }), React.createElement('rect', { x: "55", y: "50", width: "5", height: "15", fill: "#8D6E63" }), React.createElement('path', { d: "M80 30 L 85 20 H 95 L 100 30 Z M 90 30 V 50", stroke: "#F1C40F", strokeWidth: "4" }));
 const TablewareTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#F5F5F5" }), React.createElement('circle', { cx: "60", cy: "40", r: "25", fill: "white", stroke: "#E0E0E0", strokeWidth: "2" }), React.createElement('path', { d: "M30 50 L 30 20 L 35 20 V 50", fill: "#BDBDBD" }), React.createElement('path', { d: "M90 50 L 90 20 L 85 20 V 50", fill: "#BDBDBD" }));
 const StationeryTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#E8F0FE" }), React.createElement('rect', { x: "25", y: "30", width: "50", height: "10", fill: "#F9A825" }), React.createElement('path', { d: "M80 25 L 80 55 L 75 55", stroke: "#42A5F5", strokeWidth: "4" }));
+const FarmAnimalsTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#E8F5E9" }), React.createElement('path', { d: "M60 25 C 40 25 40 50 60 50 S 80 25 60 25", fill: "#FFFFFF", stroke:"#4CAF50", strokeWidth: 2}), React.createElement('path', { d: "M30 60 L 90 60 L 90 70 L 30 70 Z", fill: "#8D6E63"}), React.createElement('path', { d: "M35 50 L 35 60 M 85 50 L 85 60", stroke: "#8D6E63", strokeWidth: 4}));
+const WildAnimalsTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#FFF3E0" }), React.createElement('path', { d: "M20 70 C 40 50, 50 50, 70 70", fill: "#FBC02D" }), React.createElement('path', { d: "M70 40 L 90 70 L 100 50 Z", fill: "#4CAF50" }));
+const InsectsTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#F1F8E9" }), React.createElement('path', { d: "M60 10 C 20 80, 100 80, 60 10", fill: "#8BC34A" }), React.createElement('circle', { cx: "50", cy: "50", r: "5", fill: "#D32F2F" }), React.createElement('circle', { cx: "70", cy: "40", r: "3", fill: "#FFC107" }));
+const SeaAnimalsTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#E1F5FE" }), React.createElement('path', { d: "M20 40 C 40 20, 80 20, 100 40 C 80 60, 40 60, 20 40 Z", fill: "#03A9F4" }), React.createElement('circle', { cx: "30", cy: "20", r: "3", fill: "white" }), React.createElement('circle', { cx: "90", cy: "60", r: "2", fill: "white" }));
+const DinosaurTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#FBE9E7" }), React.createElement('path', { d: "M10 70 L 40 40 L 70 70 Z", fill: "#BF360C" }), React.createElement('path', { d: "M50 60 L 80 30 L 90 60 L 100 30 L 110 60", fill: "#795548"}));
+const BirdsTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#E0F7FA" }), React.createElement('path', { d: "M30 40 C 40 20, 60 20, 70 40 C 60 50, 40 50, 30 40", fill: "#4DD0E1"}), React.createElement('path', { d: "M70 40 L 90 20", stroke: "#006064", strokeWidth: 2 }), React.createElement('path', { d: "M50 60 L 80 60", stroke: "#8D6E63", strokeWidth: 4 }));
+const WeatherTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#E3F2FD" }), React.createElement('circle', { cx: "35", cy: "30", r: "15", fill: "#FFEB3B" }), React.createElement('path', { d: "M60 50 C 50 50, 50 30, 70 30 C 90 30, 90 50, 80 50 Z", fill: "#FFFFFF" }), React.createElement('line', { x1: "70", y1: "60", x2: "65", y2: "70", stroke: "#42A5F5", strokeWidth: 2 }), React.createElement('line', { x1: "80", y1: "60", x2: "75", y2: "70", stroke: "#42A5F5", strokeWidth: 2 }));
+const SceneryTopicIllustration: React.FC = () => React.createElement('svg', { width: "120", height: "80", viewBox: "0 0 120 80", fill: "none", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "120", height: "80", rx: "12", fill: "#E8F5E9" }), React.createElement('path', { d: "M10 70 L 40 30 L 70 70 Z", fill: "#A5D6A7" }), React.createElement('path', { d: "M50 70 L 80 40 L 110 70 Z", fill: "#81C784" }), React.createElement('path', { d: "M0 65 C 40 75, 80 55, 120 65", stroke: "#64B5F6", strokeWidth: 4, fill: "none" }));
 
 
 // FIX: Converted to React.createElement to be valid in a .ts file.
@@ -178,6 +201,37 @@ const NotebookIllustration: React.FC = () => React.createElement('svg', { viewBo
 const ScissorsIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('circle', { cx: "30", cy: "30", r: "10", stroke: "#3498DB", strokeWidth: "4", fill: "none" }), React.createElement('circle', { cx: "30", cy: "70", r: "10", stroke: "#3498DB", strokeWidth: "4", fill: "none" }), React.createElement('line', { x1: "40", y1: "35", x2: "80", y2: "80", stroke: "#7F8C8D", strokeWidth: "4" }), React.createElement('line', { x1: "40", y1: "65", x2: "80", y2: "20", stroke: "#7F8C8D", strokeWidth: "4" }));
 const GlueIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { x: "40", y: "40", width: "20", height: "40", fill: "#F39C12" }), React.createElement('rect', { x: "35", y: "20", width: "30", height: "20", fill: "#E67E22" }));
 
+const CowIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { x: "25", y: "40", width: "50", height: "30", fill: "#FFF", stroke: "#000", strokeWidth: "2" }), React.createElement('circle', { cx: "35", cy: "30", r: "10", fill: "#FFF", stroke: "#000", strokeWidth: "2" }), React.createElement('path', { d: "M40 50 h 20 v 10 h -20 z", fill: "#F8BBD0" }));
+const SheepIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('circle', { cx: "50", cy: "60", r: "25", fill: "#F5F5F5" }), React.createElement('circle', { cx: "35", cy: "50", r: "5", fill: "#F5F5F5" }), React.createElement('circle', { cx: "65", cy: "50", r: "5", fill: "#F5F5F5" }), React.createElement('circle', { cx: "50", cy: "40", r: "10", fill: "#212121" }));
+const PigIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('circle', { cx: "50", cy: "60", r: "25", fill: "#F8BBD0" }), React.createElement('circle', { cx: "50", cy: "55", r: "5", fill: "#E91E63" }));
+const ChickenIllustration2: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('circle', { cx: "50", cy: "60", r: "20", fill: "#FFFDE7" }), React.createElement('path', { d: "M50 35 L 55 25 L 45 30 Z", fill: "#D50000" }), React.createElement('path', { d: "M65 55 L 75 50 Z", fill: "#FFC107" }));
+const HorseIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M30 80 V 40 H 70 L 80 20 H 60 L 50 40", fill: "#8D6E63" }));
+const LionIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('circle', { cx: "50", cy: "50", r: "30", fill: "#FFC107" }), React.createElement('circle', { cx: "50", cy: "50", r: "20", fill: "#FFECB3" }), React.createElement('path', { d: "M50 10 L 40 20 M50 10 L 60 20 M20 40 L 10 50 M20 60 L 10 50", stroke: "#FFC107", strokeWidth: 4 }));
+const TigerIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('circle', { cx: "50", cy: "60", r: "30", fill: "#FF9800" }), React.createElement('path', { d: "M30 50 L 70 50 M35 60 L 65 60 M40 70 L 60 70", stroke: "#212121", strokeWidth: 4 }));
+const BearIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('circle', { cx: "50", cy: "60", r: "30", fill: "#6D4C41" }), React.createElement('circle', { cx: "35", cy: "40", r: "10", fill: "#6D4C41" }), React.createElement('circle', { cx: "65", cy: "40", r: "10", fill: "#6D4C41" }));
+const ElephantIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('circle', { cx: "50", cy: "50", r: "30", fill: "#BDBDBD" }), React.createElement('path', { d: "M80 50 C 90 70, 70 90, 60 70", stroke: "#BDBDBD", strokeWidth: 10, fill: "none" }));
+const MonkeyIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('circle', { cx: "50", cy: "50", r: "20", fill: "#A1887F" }), React.createElement('path', { d: "M70 50 C 90 70, 90 30, 70 50", stroke: "#A1887F", strokeWidth: 4, fill: "none" }));
+const BeeIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('ellipse', { cx: "50", cy: "60", rx: "25", ry: "15", fill: "#FFC107" }), React.createElement('path', { d: "M35 60 h 30", stroke: "black", strokeWidth: "4" }), React.createElement('path', { d: "M30 45 L 40 35 M 70 45 L 60 35", stroke: "#E0E0E0", strokeWidth: "6", fill: "none" }));
+const ButterflyIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M50 50 C 20 20, 20 80, 50 50", fill: "#03A9F4" }), React.createElement('path', { d: "M50 50 C 80 20, 80 80, 50 50", fill: "#FFEB3B" }));
+const AntIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('circle', { cx: "40", cy: "60", r: "8", fill: "black" }), React.createElement('circle', { cx: "55", cy: "60", r: "10", fill: "black" }), React.createElement('circle', { cx: "70", cy: "60", r: "8", fill: "black" }), React.createElement('path', { d: "M40 50 L 30 40 M 70 50 L 80 40", stroke: "black", strokeWidth: 2 }));
+const LadybugIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('circle', { cx: "50", cy: "60", r: "30", fill: "#D32F2F" }), React.createElement('circle', { cx: "40", cy: "50", r: "5", fill: "black" }), React.createElement('circle', { cx: "60", cy: "70", r: "5", fill: "black" }));
+const WhaleIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M10 60 C 30 40, 70 40, 90 60 Q 50 90, 10 60 Z", fill: "#42A5F5" }));
+const DolphinIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M20 60 Q 50 30, 80 60 T 20 60", fill: "#90A4AE" }));
+const SharkIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M10 60 L 90 60 L 50 40 Z M 10 60 C 40 80, 60 80, 90 60", fill: "#78909C" }));
+const OctopusIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('circle', { cx: "50", cy: "40", r: "15", fill: "#E91E63" }), React.createElement('path', { d: "M50 55 C 40 70, 30 80, 20 90 M50 55 C 60 70, 70 80, 80 90", stroke: "#E91E63", strokeWidth: 4, fill: "none" }));
+const TRexIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M80 30 L 60 40 L 70 60 L 40 80 L 30 70 L 50 50 Z", fill: "#795548" }));
+const BirdIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M30 50 C 40 30, 60 30, 70 50 S 40 70, 30 50", fill: "#03A9F4" }), React.createElement('path', { d: "M70 50 L 90 40", stroke: "black", strokeWidth: "2" }));
+const SunIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('circle', { cx: "50", cy: "50", r: "30", fill: "#FFEB3B" }));
+const CloudIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M20 70 A 20 20 0 0 1 40 50 A 25 25 0 0 1 70 30 A 20 20 0 0 1 80 50 L 80 70 Z", fill: "#F5F5F5" }));
+const RainIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M20 50 A 20 20 0 0 1 40 30 A 25 25 0 0 1 70 10 A 20 20 0 0 1 80 30 L 80 50 Z", fill: "#B0BEC5" }), React.createElement('line', { x1: "40", y1: "60", x2: "35", y2: "80", stroke: "#42A5F5", strokeWidth: 4 }), React.createElement('line', { x1: "60", y1: "60", x2: "55", y2: "80", stroke: "#42A5F5", strokeWidth: 4 }));
+const SnowIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('circle', { cx: "50", cy: "50", r: "5", fill: "#E0E0E0" }), React.createElement('path', { d: "M50 20 V 80 M 20 50 H 80 M 30 30 L 70 70 M 30 70 L 70 30", stroke: "#E0E0E0", strokeWidth: 4 }));
+const WindIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M10 40 Q 50 20, 90 40 M10 60 Q 50 80, 90 60", stroke: "#90A4AE", strokeWidth: 4, fill: "none" }));
+const MountainIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M20 80 L 50 30 L 80 80 Z", fill: "#A5D6A7" }));
+const RiverIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M10 20 C 40 40, 60 0, 90 20 V 80 C 60 60, 40 100, 10 80 Z", fill: "#64B5F6" }));
+const ForestIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M30 80 L 40 40 L 50 80 Z M 60 80 L 70 30 L 80 80 Z", fill: "#4CAF50" }));
+const BeachIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('path', { d: "M0 100 H 100 V 70 Q 50 50, 0 70 Z", fill: "#FFF9C4" }), React.createElement('path', { d: "M0 70 Q 50 50, 100 70 V 40 Q 50 20, 0 40 Z", fill: "#4FC3F7" }));
+const SkyIllustration: React.FC = () => React.createElement('svg', { viewBox: "0 0 100 100", xmlns: "http://www.w3.org/2000/svg" }, React.createElement('rect', { width: "100", height: "100", fill: "#81D4FA" }));
+
 
 export interface Word {
   word: string;
@@ -196,351 +250,368 @@ export interface WordList {
   theme: 'learn' | 'practice' | 'games';
 }
 
-export interface AnalysisData {
-    text: string;
-    type: 'vocab' | 'phrase' | 'sentence';
-    explanation: string;
-}
-
-export interface AnswerVersion {
-    score: string;
-    answer: string | string[];
-    analysis?: AnalysisData[];
-}
-
-export interface QASample {
-    question: string;
-    versions: AnswerVersion[];
-}
-
-export interface CueCardData {
-    id: string;
-    title: string;
-    category: string;
-    categoryClass: 'person-card' | 'event-card' | 'place-card' | 'object-card';
-    status?: 'New';
-    part1Questions?: string[];
-    part2Title?: string;
-    part2Description?: string;
-    part2Prompts?: string[];
-    part3Questions?: string[];
-    sampleAnswers?: QASample[];
-    isNew?: boolean;
-}
-
-export interface TopicData {
-  id: string;
+export interface TopicCategory {
   title: string;
-  cards: CueCardData[];
-  isNew?: boolean;
+  topics: WordList[];
 }
 
-export const wordLists: WordList[] = [
+export const topicCategories: TopicCategory[] = [
   {
-    id: 'colors-1',
-    title: '基础颜色 (Basic Colors)',
-    description: '学习最常见的颜色名称。',
-    illustration: ColorsTopicIllustration,
-    theme: 'learn',
-    words: [
-      { word: 'red', phonetic: '/red/', definition: '红色', example: 'An apple is red.', illustration: RedIllustration },
-      { word: 'blue', phonetic: '/bluː/', definition: '蓝色', example: 'The sky is blue.', illustration: BlueIllustration },
-      { word: 'green', phonetic: '/ɡriːn/', definition: '绿色', example: 'The grass is green.', illustration: GreenIllustration },
-      { word: 'yellow', phonetic: '/ˈjeloʊ/', definition: '黄色', example: 'A banana is yellow.', illustration: YellowIllustration },
-      { word: 'black', phonetic: '/blæk/', definition: '黑色', example: 'The cat is black.', illustration: BlackIllustration },
-      { word: 'white', phonetic: '/waɪt/', definition: '白色', example: 'The snow is white.', illustration: WhiteIllustration },
-      { word: 'orange', phonetic: '/ˈɔːrɪndʒ/', definition: '橙色', example: 'A carrot is orange.', illustration: OrangeIllustration },
-      { word: 'purple', phonetic: '/ˈpɜːrpəl/', definition: '紫色', example: 'Grapes can be purple.', illustration: PurpleIllustration },
-      { word: 'pink', phonetic: '/pɪŋk/', definition: '粉色', example: 'Some flowers are pink.', illustration: PinkIllustration },
-      { word: 'brown', phonetic: '/braʊn/', definition: '棕色', example: 'The bear is brown.', illustration: BrownIllustration },
-      { word: 'gray', phonetic: '/ɡreɪ/', definition: '灰色', example: 'The rock is gray.', illustration: GrayIllustration },
-    ],
+    title: '基础认知 (Basics)',
+    topics: [
+      {
+        id: 'colors-1',
+        title: '基础颜色 (Basic Colors)',
+        description: '学习最常见的颜色名称。',
+        illustration: ColorsTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'red', phonetic: '/red/', definition: '红色', example: 'An apple is red.', illustration: RedIllustration },
+          { word: 'blue', phonetic: '/bluː/', definition: '蓝色', example: 'The sky is blue.', illustration: BlueIllustration },
+          { word: 'green', phonetic: '/ɡriːn/', definition: '绿色', example: 'The grass is green.', illustration: GreenIllustration },
+          { word: 'yellow', phonetic: '/ˈjeloʊ/', definition: '黄色', example: 'A banana is yellow.', illustration: YellowIllustration },
+          { word: 'black', phonetic: '/blæk/', definition: '黑色', example: 'The cat is black.', illustration: BlackIllustration },
+          { word: 'white', phonetic: '/waɪt/', definition: '白色', example: 'The snow is white.', illustration: WhiteIllustration },
+          { word: 'orange', phonetic: '/ˈɔːrɪndʒ/', definition: '橙色', example: 'A carrot is orange.', illustration: OrangeIllustration },
+          { word: 'purple', phonetic: '/ˈpɜːrpəl/', definition: '紫色', example: 'Grapes can be purple.', illustration: PurpleIllustration },
+          { word: 'pink', phonetic: '/pɪŋk/', definition: '粉色', example: 'Some flowers are pink.', illustration: PinkIllustration },
+          { word: 'brown', phonetic: '/braʊn/', definition: '棕色', example: 'The bear is brown.', illustration: BrownIllustration },
+          { word: 'gray', phonetic: '/ɡreɪ/', definition: '灰色', example: 'The rock is gray.', illustration: GrayIllustration },
+        ],
+      },
+      {
+        id: 'numbers-0-12',
+        title: '数字 0-12 (Numbers 0-12)',
+        description: '学习从零到十二的数字。',
+        illustration: NumbersTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'zero', phonetic: '/ˈzɪroʊ/', definition: '零', example: 'The temperature is zero degrees.', illustration: ZeroIllustration },
+          { word: 'one', phonetic: '/wʌn/', definition: '一', example: 'I have one dog.', illustration: OneIllustration },
+          { word: 'two', phonetic: '/tuː/', definition: '二', example: 'She has two cats.', illustration: TwoIllustration },
+          { word: 'three', phonetic: '/θriː/', definition: '三', example: 'There are three books.', illustration: ThreeIllustration },
+          { word: 'four', phonetic: '/fɔːr/', definition: '四', example: 'He is four years old.', illustration: FourIllustration },
+          { word: 'five', phonetic: '/faɪv/', definition: '五', example: 'A star has five points.', illustration: FiveIllustration },
+          { word: 'six', phonetic: '/sɪks/', definition: '六', example: 'There are six apples.', illustration: SixIllustration },
+          { word: 'seven', phonetic: '/ˈsevən/', definition: '七', example: 'A week has seven days.', illustration: SevenIllustration },
+          { word: 'eight', phonetic: '/eɪt/', definition: '八', example: 'An octopus has eight arms.', illustration: EightIllustration },
+          { word: 'nine', phonetic: '/naɪn/', definition: '九', example: 'A cat is said to have nine lives.', illustration: NineIllustration },
+          { word: 'ten', phonetic: '/ten/', definition: '十', example: 'I have ten fingers.', illustration: TenIllustration },
+          { word: 'eleven', phonetic: '/ɪˈlevən/', definition: '十一', example: 'The team has eleven players.', illustration: ElevenIllustration },
+          { word: 'twelve', phonetic: '/twelv/', definition: '十二', example: 'There are twelve months in a year.', illustration: TwelveIllustration },
+        ],
+      },
+      {
+        id: 'days-of-week',
+        title: '星期 (Days of the Week)',
+        description: '学习从周一到周日的单词。',
+        illustration: DaysTopicIllustration,
+        theme: 'learn',
+        words: [
+            { word: 'Monday', phonetic: '/ˈmʌndeɪ/', definition: '星期一', example: 'The week starts on Monday.', illustration: MondayIllustration },
+            { word: 'Tuesday', phonetic: '/ˈtuːzdeɪ/', definition: '星期二', example: 'We have a meeting on Tuesday.', illustration: TuesdayIllustration },
+            { word: 'Wednesday', phonetic: '/ˈwenzdeɪ/', definition: '星期三', example: 'Wednesday is the middle of the week.', illustration: WednesdayIllustration },
+            { word: 'Thursday', phonetic: '/ˈθɜːrzdeɪ/', definition: '星期四', example: 'Let\'s go out on Thursday.', illustration: ThursdayIllustration },
+            { word: 'Friday', phonetic: '/ˈfraɪdeɪ/', definition: '星期五', example: 'I love Fridays!', illustration: FridayIllustration },
+            { word: 'Saturday', phonetic: '/ˈsætərdeɪ/', definition: '星期六', example: 'Saturday is part of the weekend.', illustration: SaturdayIllustration },
+            { word: 'Sunday', phonetic: '/ˈsʌndeɪ/', definition: '星期日', example: 'Sunday is a day of rest.', illustration: SundayIllustration },
+        ],
+      },
+      {
+        id: 'months-of-year',
+        title: '月份 (Months of the Year)',
+        description: '学习从一月到十二月的单词。',
+        illustration: MonthsTopicIllustration,
+        theme: 'learn',
+        words: [
+            { word: 'January', phonetic: '/ˈdʒænjueri/', definition: '一月', example: 'New Year\'s Day is in January.', illustration: JanuaryIllustration },
+            { word: 'February', phonetic: '/ˈfebrueri/', definition: '二月', example: 'Valentine\'s Day is in February.', illustration: FebruaryIllustration },
+            { word: 'March', phonetic: '/mɑːrtʃ/', definition: '三月', example: 'Spring begins in March.', illustration: MarchIllustration },
+            { word: 'April', phonetic: '/ˈeɪprəl/', definition: '四月', example: 'April showers bring May flowers.', illustration: AprilIllustration },
+            { word: 'May', phonetic: '/meɪ/', definition: '五月', example: 'My birthday is in May.', illustration: MayIllustration },
+            { word: 'June', phonetic: '/dʒuːn/', definition: '六月', example: 'Summer starts in June.', illustration: JuneIllustration },
+            { word: 'July', phonetic: '/dʒʊˈlaɪ/', definition: '七月', example: 'It is very hot in July.', illustration: JulyIllustration },
+            { word: 'August', phonetic: '/ˈɔːɡəst/', definition: '八月', example: 'We go on vacation in August.', illustration: AugustIllustration },
+            { word: 'September', phonetic: '/sepˈtembər/', definition: '九月', example: 'School starts in September.', illustration: SeptemberIllustration },
+            { word: 'October', phonetic: '/ɑːkˈtoʊbər/', definition: '十月', example: 'Halloween is in October.', illustration: OctoberIllustration },
+            { word: 'November', phonetic: '/noʊˈvembər/', definition: '十一月', example: 'Thanksgiving is in November.', illustration: NovemberIllustration },
+            { word: 'December', phonetic: '/dɪˈsembər/', definition: '十二月', example: 'Christmas is in December.', illustration: DecemberIllustration },
+        ],
+      },
+    ]
   },
   {
-    id: 'numbers-0-12',
-    title: '数字 0-12 (Numbers 0-12)',
-    description: '学习从零到十二的数字。',
-    illustration: NumbersTopicIllustration,
-    theme: 'learn',
-    words: [
-      { word: 'zero', phonetic: '/ˈzɪroʊ/', definition: '零', example: 'The temperature is zero degrees.', illustration: ZeroIllustration },
-      { word: 'one', phonetic: '/wʌn/', definition: '一', example: 'I have one dog.', illustration: OneIllustration },
-      { word: 'two', phonetic: '/tuː/', definition: '二', example: 'She has two cats.', illustration: TwoIllustration },
-      { word: 'three', phonetic: '/θriː/', definition: '三', example: 'There are three books.', illustration: ThreeIllustration },
-      { word: 'four', phonetic: '/fɔːr/', definition: '四', example: 'He is four years old.', illustration: FourIllustration },
-      { word: 'five', phonetic: '/faɪv/', definition: '五', example: 'A star has five points.', illustration: FiveIllustration },
-      { word: 'six', phonetic: '/sɪks/', definition: '六', example: 'There are six apples.', illustration: SixIllustration },
-      { word: 'seven', phonetic: '/ˈsevən/', definition: '七', example: 'A week has seven days.', illustration: SevenIllustration },
-      { word: 'eight', phonetic: '/eɪt/', definition: '八', example: 'An octopus has eight arms.', illustration: EightIllustration },
-      { word: 'nine', phonetic: '/naɪn/', definition: '九', example: 'A cat is said to have nine lives.', illustration: NineIllustration },
-      { word: 'ten', phonetic: '/ten/', definition: '十', example: 'I have ten fingers.', illustration: TenIllustration },
-      { word: 'eleven', phonetic: '/ɪˈlevən/', definition: '十一', example: 'The team has eleven players.', illustration: ElevenIllustration },
-      { word: 'twelve', phonetic: '/twelv/', definition: '十二', example: 'There are twelve months in a year.', illustration: TwelveIllustration },
-    ],
+    title: '生活物品 (Life & Home)',
+    topics: [
+      {
+        id: 'fruits-1',
+        title: '水果 (Fruits)',
+        description: '学习常见水果的名称。',
+        illustration: FruitsTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'apple', phonetic: '/ˈæpəl/', definition: '苹果', example: 'An apple a day keeps the doctor away.', illustration: RedIllustration },
+          { word: 'banana', phonetic: '/bəˈnænə/', definition: '香蕉', example: 'Monkeys like to eat bananas.', illustration: BananaIllustration },
+          { word: 'orange', phonetic: '/ˈɔːrɪndʒ/', definition: '橙子', example: 'An orange is a citrus fruit.', illustration: OrangeIllustration },
+          { word: 'strawberry', phonetic: '/ˈstrɔːberi/', definition: '草莓', example: 'I like strawberry ice cream.', illustration: StrawberryIllustration },
+          { word: 'grape', phonetic: '/ɡreɪp/', definition: '葡萄', example: 'Grapes grow on vines.', illustration: PurpleIllustration },
+          { word: 'cherry', phonetic: '/ˈtʃeri/', definition: '樱桃', example: 'The cherry on the cake is red.', illustration: CherryIllustration },
+          { word: 'pear', phonetic: '/per/', definition: '梨', example: 'This pear is very juicy.', illustration: PearIllustration },
+          { word: 'mango', phonetic: '/ˈmæŋɡoʊ/', definition: '芒果', example: 'Mango is a tropical fruit.', illustration: MangoIllustration },
+          { word: 'watermelon', phonetic: '/ˈwɔːtərmelən/', definition: '西瓜', example: 'Watermelon is refreshing in summer.', illustration: WatermelonIllustration },
+          { word: 'peach', phonetic: '/piːtʃ/', definition: '桃子', example: 'A peach has fuzzy skin.', illustration: PeachIllustration },
+          { word: 'kiwi', phonetic: '/ˈkiːwiː/', definition: '猕猴桃', example: 'Kiwi is green inside.', illustration: KiwiIllustration },
+          { word: 'lemon', phonetic: '/ˈlemən/', definition: '柠檬', example: 'A lemon tastes sour.', illustration: LemonIllustration },
+          { word: 'litchi', phonetic: '/ˈliːtʃiː/', definition: '荔枝', example: 'Litchi has a red, bumpy shell.', illustration: LitchiIllustration },
+        ],
+      },
+      {
+        id: 'vegetables-1',
+        title: '蔬菜 (Vegetables)',
+        description: '学习常见蔬菜的名称。',
+        illustration: VegetablesTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'potato', phonetic: '/pəˈteɪtoʊ/', definition: '土豆', example: 'French fries are made from potatoes.', illustration: PotatoIllustration },
+          { word: 'tomato', phonetic: '/təˈmeɪtoʊ/', definition: '西红柿', example: 'A tomato is technically a fruit.', illustration: TomatoIllustration },
+          { word: 'cucumber', phonetic: '/ˈkjuːkʌmbər/', definition: '黄瓜', example: 'Cucumber is cool and refreshing.', illustration: CucumberIllustration },
+          { word: 'garlic', phonetic: '/ˈɡɑːrlɪk/', definition: '大蒜', example: 'Garlic adds flavor to many dishes.', illustration: GarlicIllustration },
+          { word: 'peas', phonetic: '/piːz/', definition: '豌豆', example: 'I like green peas in my salad.', illustration: PeasIllustration },
+          { word: 'pepper', phonetic: '/ˈpepər/', definition: '辣椒/甜椒', example: 'Red pepper can be sweet or spicy.', illustration: PepperIllustration },
+          { word: 'onion', phonetic: '/ˈʌnjən/', definition: '洋葱', example: 'Cutting an onion can make you cry.', illustration: OnionIllustration },
+          { word: 'mushroom', phonetic: '/ˈmʌʃrʊm/', definition: '蘑菇', example: 'Some mushrooms are edible.', illustration: MushroomIllustration },
+          { word: 'corn', phonetic: '/kɔːrn/', definition: '玉米', example: 'Corn on the cob is a summer treat.', illustration: CornIllustration },
+          { word: 'eggplant', phonetic: '/ˈeɡplænt/', definition: '茄子', example: 'Eggplant is also called aubergine.', illustration: EggplantIllustration },
+          { word: 'carrot', phonetic: '/ˈkærət/', definition: '胡萝卜', example: 'Rabbits love to eat carrots.', illustration: CarrotIllustration },
+          { word: 'pumpkin', phonetic: '/ˈpʌmpkɪn/', definition: '南瓜', example: 'We carve pumpkins for Halloween.', illustration: PumpkinIllustration },
+          { word: 'lettuce', phonetic: '/ˈletɪs/', definition: '生菜', example: 'Lettuce is the main ingredient in salad.', illustration: LettuceIllustration },
+          { word: 'cabbage', phonetic: '/ˈkæbɪdʒ/', definition: '卷心菜', example: 'Cabbage can be eaten raw or cooked.', illustration: CabbageIllustration },
+        ],
+      },
+      {
+        id: 'food-1',
+        title: '食物 (Food)',
+        description: '学习常见食物的名称。',
+        illustration: FoodTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'pizza', phonetic: '/ˈpiːtsə/', definition: '披萨', example: 'I would like to order a pizza.', illustration: PizzaIllustration },
+          { word: 'hamburger', phonetic: '/ˈhæmbɜːrɡər/', definition: '汉堡包', example: 'Let\'s grab a hamburger for lunch.', illustration: HamburgerIllustration },
+          { word: 'ice cream', phonetic: '/aɪs kriːm/', definition: '冰淇淋', example: 'My favorite flavor of ice cream is vanilla.', illustration: IceCreamIllustration },
+          { word: 'salad', phonetic: '/ˈsæləd/', definition: '沙拉', example: 'A fresh salad is a healthy meal.', illustration: SaladIllustration },
+          { word: 'sandwich', phonetic: '/ˈsænwɪtʃ/', definition: '三明治', example: 'He made a turkey sandwich.', illustration: SandwichIllustration },
+          { word: 'bread', phonetic: '/bred/', definition: '面包', example: 'Would you like a slice of bread?', illustration: BreadIllustration },
+          { word: 'fish', phonetic: '/fɪʃ/', definition: '鱼', example: 'We had grilled fish for dinner.', illustration: FishIllustration },
+          { word: 'cake', phonetic: '/keɪk/', definition: '蛋糕', example: 'We celebrated with a birthday cake.', illustration: CakeIllustration },
+          { word: 'rice', phonetic: '/raɪs/', definition: '米饭', example: 'Rice is a staple food in Asia.', illustration: RiceIllustration },
+          { word: 'chicken', phonetic: '/ˈtʃɪkɪn/', definition: '鸡肉', example: 'Roasted chicken is my favorite dish.', illustration: ChickenIllustration },
+          { word: 'pie', phonetic: '/paɪ/', definition: '派', example: 'She baked an apple pie.', illustration: PieIllustration },
+          { word: 'cookie', phonetic: '/ˈkʊki/', definition: '曲奇', example: 'I love chocolate chip cookies.', illustration: CookieIllustration },
+          { word: 'dumpling', phonetic: '/ˈdʌmplɪŋ/', definition: '饺子', example: 'Dumplings are a traditional Chinese food.', illustration: DumplingIllustration },
+          { word: 'noodles', phonetic: '/ˈnuːdlz/', definition: '面条', example: 'I want to eat a bowl of noodles.', illustration: NoodlesIllustration },
+          { word: 'candy', phonetic: '/ˈkændi/', definition: '糖果', example: 'Eating too much candy is bad for your teeth.', illustration: CandyIllustration },
+          { word: 'chocolate', phonetic: '/ˈtʃɔːklət/', definition: '巧克力', example: 'She loves dark chocolate.', illustration: ChocolateIllustration },
+          { word: 'meat', phonetic: '/miːt/', definition: '肉', example: 'Lions are meat-eating animals.', illustration: MeatIllustration },
+          { word: 'egg', phonetic: '/eɡ/', definition: '鸡蛋', example: 'I eat a boiled egg for breakfast.', illustration: EggIllustration },
+          { word: 'shrimp', phonetic: '/ʃrɪmp/', definition: '虾', example: 'Shrimp is a type of seafood.', illustration: ShrimpIllustration },
+          { word: 'jelly', phonetic: '/ˈdʒeli/', definition: '果冻', example: 'Jelly is a popular dessert for kids.', illustration: JellyIllustration },
+        ],
+      },
+      {
+        id: 'drinks-1',
+        title: '饮料 (Drinks)',
+        description: '学习各种常见饮料的名称。',
+        illustration: DrinksTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'water', phonetic: '/ˈwɔːtər/', definition: '水', example: 'Please drink more water.', illustration: WaterIllustration },
+          { word: 'milk', phonetic: '/mɪlk/', definition: '牛奶', example: 'I drink milk every morning.', illustration: MilkIllustration },
+          { word: 'juice', phonetic: '/dʒuːs/', definition: '果汁', example: 'She likes orange juice.', illustration: JuiceIllustration },
+          { word: 'tea', phonetic: '/tiː/', definition: '茶', example: 'Would you like a cup of tea?', illustration: TeaIllustration },
+          { word: 'coffee', phonetic: '/ˈkɔːfi/', definition: '咖啡', example: 'He needs coffee to wake up.', illustration: CoffeeIllustration },
+          { word: 'soda', phonetic: '/ˈsoʊdə/', definition: '苏打水', example: 'Soda is a sweet, fizzy drink.', illustration: SodaIllustration },
+        ],
+      },
+      {
+        id: 'clothes-1',
+        title: '衣物 (Clothes)',
+        description: '学习常见衣物的名称。',
+        illustration: ClothesTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'shirt', phonetic: '/ʃɜːrt/', definition: '衬衫', example: 'He is wearing a blue shirt.', illustration: ShirtIllustration },
+          { word: 'pants', phonetic: '/pænts/', definition: '裤子', example: 'I need to buy new pants.', illustration: PantsIllustration },
+          { word: 'dress', phonetic: '/dres/', definition: '连衣裙', example: 'She wore a beautiful dress to the party.', illustration: DressIllustration },
+          { word: 'skirt', phonetic: '/skɜːrt/', definition: '裙子', example: 'That is a nice skirt.', illustration: SkirtIllustration },
+          { word: 'shoes', phonetic: '/ʃuːz/', definition: '鞋子', example: 'My new shoes are very comfortable.', illustration: ShoesIllustration },
+          { word: 'hat', phonetic: '/hæt/', definition: '帽子', example: 'He wears a hat in the sun.', illustration: HatIllustration },
+          { word: 'socks', phonetic: '/sɑːks/', definition: '袜子', example: 'Where are my socks?', illustration: SocksIllustration },
+          { word: 'coat', phonetic: '/koʊt/', definition: '外套', example: 'It is cold, you should wear a coat.', illustration: CoatIllustration },
+        ],
+      },
+      {
+        id: 'furniture-1',
+        title: '家具 (Furniture)',
+        description: '学习常见家具的名称。',
+        illustration: FurnitureTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'table', phonetic: '/ˈteɪbəl/', definition: '桌子', example: 'The book is on the table.', illustration: TableIllustration },
+          { word: 'chair', phonetic: '/tʃer/', definition: '椅子', example: 'Please have a seat on this chair.', illustration: ChairIllustration },
+          { word: 'bed', phonetic: '/bed/', definition: '床', example: 'I am tired, I want to go to bed.', illustration: BedIllustration },
+          { word: 'sofa', phonetic: '/ˈsoʊfə/', definition: '沙发', example: 'We are watching TV on the sofa.', illustration: SofaIllustration },
+          { word: 'desk', phonetic: '/desk/', definition: '书桌', example: 'She does her homework at her desk.', illustration: DeskIllustration },
+          { word: 'lamp', phonetic: '/læmp/', definition: '灯', example: 'Turn on the lamp, it is dark.', illustration: LampIllustration },
+          { word: 'bookshelf', phonetic: '/ˈbʊkʃelf/', definition: '书架', example: 'The bookshelf is full of books.', illustration: BookshelfIllustration },
+        ],
+      },
+      {
+        id: 'tableware-1',
+        title: '餐具 (Tableware)',
+        description: '学习常见餐具的名称。',
+        illustration: TablewareTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'bowl', phonetic: '/boʊl/', definition: '碗', example: 'I eat soup from a bowl.', illustration: BowlIllustration },
+          { word: 'plate', phonetic: '/pleɪt/', definition: '盘子', example: 'Put the food on the plate.', illustration: PlateIllustration },
+          { word: 'spoon', phonetic: '/spuːn/', definition: '勺子', example: 'Use a spoon to eat yogurt.', illustration: SpoonIllustration },
+          { word: 'fork', phonetic: '/fɔːrk/', definition: '叉子', example: 'A fork is used for eating salad.', illustration: ForkIllustration },
+          { word: 'knife', phonetic: '/naɪf/', definition: '刀', example: 'Be careful with that sharp knife.', illustration: KnifeIllustration },
+          { word: 'chopsticks', phonetic: '/ˈtʃɑːpstɪks/', definition: '筷子', example: 'Many people in Asia use chopsticks.', illustration: ChopsticksIllustration },
+          { word: 'cup', phonetic: '/kʌp/', definition: '杯子', example: 'I would like a cup of tea.', illustration: CupIllustration },
+          { word: 'glass', phonetic: '/ɡlæs/', definition: '玻璃杯', example: 'She drank a glass of water.', illustration: GlassIllustration },
+        ],
+      },
+      {
+        id: 'stationery-1',
+        title: '文具 (Stationery)',
+        description: '学习常见文具的名称。',
+        illustration: StationeryTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'pen', phonetic: '/pen/', definition: '钢笔', example: 'Please sign with a black pen.', illustration: PenIllustration },
+          { word: 'pencil', phonetic: '/ˈpensəl/', definition: '铅笔', example: 'I need to sharpen my pencil.', illustration: PencilIllustration },
+          { word: 'eraser', phonetic: '/ɪˈreɪsər/', definition: '橡皮', example: 'I made a mistake, I need an eraser.', illustration: EraserIllustration },
+          { word: 'ruler', phonetic: '/ˈruːlər/', definition: '尺子', example: 'Use a ruler to draw a straight line.', illustration: RulerIllustration },
+          { word: 'book', phonetic: '/bʊk/', definition: '书', example: 'He is reading an interesting book.', illustration: BookIllustration },
+          { word: 'notebook', phonetic: '/ˈnoʊtbʊk/', definition: '笔记本', example: 'Write your notes in this notebook.', illustration: NotebookIllustration },
+          { word: 'scissors', phonetic: '/ˈsɪzərz/', definition: '剪刀', example: 'I need scissors to cut the paper.', illustration: ScissorsIllustration },
+          { word: 'glue', phonetic: '/ɡluː/', definition: '胶水', example: 'Use glue to stick the pictures.', illustration: GlueIllustration },
+        ],
+      },
+    ]
   },
   {
-    id: 'days-of-week',
-    title: '星期 (Days of the Week)',
-    description: '学习从周一到周日的单词。',
-    illustration: DaysTopicIllustration,
-    theme: 'learn',
-    words: [
-        { word: 'Monday', phonetic: '/ˈmʌndeɪ/', definition: '星期一', example: 'The week starts on Monday.', illustration: MondayIllustration },
-        { word: 'Tuesday', phonetic: '/ˈtuːzdeɪ/', definition: '星期二', example: 'We have a meeting on Tuesday.', illustration: TuesdayIllustration },
-        { word: 'Wednesday', phonetic: '/ˈwenzdeɪ/', definition: '星期三', example: 'Wednesday is the middle of the week.', illustration: WednesdayIllustration },
-        { word: 'Thursday', phonetic: '/ˈθɜːrzdeɪ/', definition: '星期四', example: 'Let\'s go out on Thursday.', illustration: ThursdayIllustration },
-        { word: 'Friday', phonetic: '/ˈfraɪdeɪ/', definition: '星期五', example: 'I love Fridays!', illustration: FridayIllustration },
-        { word: 'Saturday', phonetic: '/ˈsætərdeɪ/', definition: '星期六', example: 'Saturday is part of the weekend.', illustration: SaturdayIllustration },
-        { word: 'Sunday', phonetic: '/ˈsʌndeɪ/', definition: '星期日', example: 'Sunday is a day of rest.', illustration: SundayIllustration },
-    ],
-  },
-  {
-    id: 'months-of-year',
-    title: '月份 (Months of the Year)',
-    description: '学习从一月到十二月的单词。',
-    illustration: MonthsTopicIllustration,
-    theme: 'learn',
-    words: [
-        { word: 'January', phonetic: '/ˈdʒænjueri/', definition: '一月', example: 'New Year\'s Day is in January.', illustration: JanuaryIllustration },
-        { word: 'February', phonetic: '/ˈfebrueri/', definition: '二月', example: 'Valentine\'s Day is in February.', illustration: FebruaryIllustration },
-        { word: 'March', phonetic: '/mɑːrtʃ/', definition: '三月', example: 'Spring begins in March.', illustration: MarchIllustration },
-        { word: 'April', phonetic: '/ˈeɪprəl/', definition: '四月', example: 'April showers bring May flowers.', illustration: AprilIllustration },
-        { word: 'May', phonetic: '/meɪ/', definition: '五月', example: 'My birthday is in May.', illustration: MayIllustration },
-        { word: 'June', phonetic: '/dʒuːn/', definition: '六月', example: 'Summer starts in June.', illustration: JuneIllustration },
-        { word: 'July', phonetic: '/dʒʊˈlaɪ/', definition: '七月', example: 'It is very hot in July.', illustration: JulyIllustration },
-        { word: 'August', phonetic: '/ˈɔːɡəst/', definition: '八月', example: 'We go on vacation in August.', illustration: AugustIllustration },
-        { word: 'September', phonetic: '/sepˈtembər/', definition: '九月', example: 'School starts in September.', illustration: SeptemberIllustration },
-        { word: 'October', phonetic: '/ɑːkˈtoʊbər/', definition: '十月', example: 'Halloween is in October.', illustration: OctoberIllustration },
-        { word: 'November', phonetic: '/noʊˈvembər/', definition: '十一月', example: 'Thanksgiving is in November.', illustration: NovemberIllustration },
-        { word: 'December', phonetic: '/dɪˈsembər/', definition: '十二月', example: 'Christmas is in December.', illustration: DecemberIllustration },
-    ],
-  },
-  {
-    id: 'fruits-1',
-    title: '水果 (Fruits)',
-    description: '学习常见水果的名称。',
-    illustration: FruitsTopicIllustration,
-    theme: 'learn',
-    words: [
-      { word: 'apple', phonetic: '/ˈæpəl/', definition: '苹果', example: 'An apple a day keeps the doctor away.', illustration: RedIllustration },
-      { word: 'banana', phonetic: '/bəˈnænə/', definition: '香蕉', example: 'Monkeys like to eat bananas.', illustration: BananaIllustration },
-      { word: 'orange', phonetic: '/ˈɔːrɪndʒ/', definition: '橙子', example: 'An orange is a citrus fruit.', illustration: OrangeIllustration },
-      { word: 'strawberry', phonetic: '/ˈstrɔːberi/', definition: '草莓', example: 'I like strawberry ice cream.', illustration: StrawberryIllustration },
-      { word: 'grape', phonetic: '/ɡreɪp/', definition: '葡萄', example: 'Grapes grow on vines.', illustration: PurpleIllustration },
-      { word: 'cherry', phonetic: '/ˈtʃeri/', definition: '樱桃', example: 'The cherry on the cake is red.', illustration: CherryIllustration },
-      { word: 'pear', phonetic: '/per/', definition: '梨', example: 'This pear is very juicy.', illustration: PearIllustration },
-      { word: 'mango', phonetic: '/ˈmæŋɡoʊ/', definition: '芒果', example: 'Mango is a tropical fruit.', illustration: MangoIllustration },
-      { word: 'watermelon', phonetic: '/ˈwɔːtərmelən/', definition: '西瓜', example: 'Watermelon is refreshing in summer.', illustration: WatermelonIllustration },
-      { word: 'peach', phonetic: '/piːtʃ/', definition: '桃子', example: 'A peach has fuzzy skin.', illustration: PeachIllustration },
-      { word: 'kiwi', phonetic: '/ˈkiːwiː/', definition: '猕猴桃', example: 'Kiwi is green inside.', illustration: KiwiIllustration },
-      { word: 'lemon', phonetic: '/ˈlemən/', definition: '柠檬', example: 'A lemon tastes sour.', illustration: LemonIllustration },
-      { word: 'litchi', phonetic: '/ˈliːtʃiː/', definition: '荔枝', example: 'Litchi has a red, bumpy shell.', illustration: LitchiIllustration },
-    ],
-  },
-  {
-    id: 'vegetables-1',
-    title: '蔬菜 (Vegetables)',
-    description: '学习常见蔬菜的名称。',
-    illustration: VegetablesTopicIllustration,
-    theme: 'learn',
-    words: [
-      { word: 'potato', phonetic: '/pəˈteɪtoʊ/', definition: '土豆', example: 'French fries are made from potatoes.', illustration: PotatoIllustration },
-      { word: 'tomato', phonetic: '/təˈmeɪtoʊ/', definition: '西红柿', example: 'A tomato is technically a fruit.', illustration: TomatoIllustration },
-      { word: 'cucumber', phonetic: '/ˈkjuːkʌmbər/', definition: '黄瓜', example: 'Cucumber is cool and refreshing.', illustration: CucumberIllustration },
-      { word: 'garlic', phonetic: '/ˈɡɑːrlɪk/', definition: '大蒜', example: 'Garlic adds flavor to many dishes.', illustration: GarlicIllustration },
-      { word: 'peas', phonetic: '/piːz/', definition: '豌豆', example: 'I like green peas in my salad.', illustration: PeasIllustration },
-      { word: 'pepper', phonetic: '/ˈpepər/', definition: '辣椒/甜椒', example: 'Red pepper can be sweet or spicy.', illustration: PepperIllustration },
-      { word: 'onion', phonetic: '/ˈʌnjən/', definition: '洋葱', example: 'Cutting an onion can make you cry.', illustration: OnionIllustration },
-      { word: 'mushroom', phonetic: '/ˈmʌʃrʊm/', definition: '蘑菇', example: 'Some mushrooms are edible.', illustration: MushroomIllustration },
-      { word: 'corn', phonetic: '/kɔːrn/', definition: '玉米', example: 'Corn on the cob is a summer treat.', illustration: CornIllustration },
-      { word: 'eggplant', phonetic: '/ˈeɡplænt/', definition: '茄子', example: 'Eggplant is also called aubergine.', illustration: EggplantIllustration },
-      { word: 'carrot', phonetic: '/ˈkærət/', definition: '胡萝卜', example: 'Rabbits love to eat carrots.', illustration: CarrotIllustration },
-      { word: 'pumpkin', phonetic: '/ˈpʌmpkɪn/', definition: '南瓜', example: 'We carve pumpkins for Halloween.', illustration: PumpkinIllustration },
-      { word: 'lettuce', phonetic: '/ˈletɪs/', definition: '生菜', example: 'Lettuce is the main ingredient in salad.', illustration: LettuceIllustration },
-      { word: 'cabbage', phonetic: '/ˈkæbɪdʒ/', definition: '卷心菜', example: 'Cabbage can be eaten raw or cooked.', illustration: CabbageIllustration },
-    ],
-  },
-  {
-    id: 'food-1',
-    title: '食物 (Food)',
-    description: '学习常见食物的名称。',
-    illustration: FoodTopicIllustration,
-    theme: 'learn',
-    words: [
-      { word: 'pizza', phonetic: '/ˈpiːtsə/', definition: '披萨', example: 'I would like to order a pizza.', illustration: PizzaIllustration },
-      { word: 'hamburger', phonetic: '/ˈhæmbɜːrɡər/', definition: '汉堡包', example: 'Let\'s grab a hamburger for lunch.', illustration: HamburgerIllustration },
-      { word: 'ice cream', phonetic: '/aɪs kriːm/', definition: '冰淇淋', example: 'My favorite flavor of ice cream is vanilla.', illustration: IceCreamIllustration },
-      { word: 'salad', phonetic: '/ˈsæləd/', definition: '沙拉', example: 'A fresh salad is a healthy meal.', illustration: SaladIllustration },
-      { word: 'sandwich', phonetic: '/ˈsænwɪtʃ/', definition: '三明治', example: 'He made a turkey sandwich.', illustration: SandwichIllustration },
-      { word: 'bread', phonetic: '/bred/', definition: '面包', example: 'Would you like a slice of bread?', illustration: BreadIllustration },
-      { word: 'fish', phonetic: '/fɪʃ/', definition: '鱼', example: 'We had grilled fish for dinner.', illustration: FishIllustration },
-      { word: 'cake', phonetic: '/keɪk/', definition: '蛋糕', example: 'We celebrated with a birthday cake.', illustration: CakeIllustration },
-      { word: 'rice', phonetic: '/raɪs/', definition: '米饭', example: 'Rice is a staple food in Asia.', illustration: RiceIllustration },
-      { word: 'chicken', phonetic: '/ˈtʃɪkɪn/', definition: '鸡肉', example: 'Roasted chicken is my favorite dish.', illustration: ChickenIllustration },
-      { word: 'pie', phonetic: '/paɪ/', definition: '派', example: 'She baked an apple pie.', illustration: PieIllustration },
-      { word: 'cookie', phonetic: '/ˈkʊki/', definition: '曲奇', example: 'I love chocolate chip cookies.', illustration: CookieIllustration },
-      { word: 'dumpling', phonetic: '/ˈdʌmplɪŋ/', definition: '饺子', example: 'Dumplings are a traditional Chinese food.', illustration: DumplingIllustration },
-      { word: 'noodles', phonetic: '/ˈnuːdlz/', definition: '面条', example: 'I want to eat a bowl of noodles.', illustration: NoodlesIllustration },
-      { word: 'candy', phonetic: '/ˈkændi/', definition: '糖果', example: 'Eating too much candy is bad for your teeth.', illustration: CandyIllustration },
-      { word: 'chocolate', phonetic: '/ˈtʃɔːklət/', definition: '巧克力', example: 'She loves dark chocolate.', illustration: ChocolateIllustration },
-      { word: 'meat', phonetic: '/miːt/', definition: '肉', example: 'Lions are meat-eating animals.', illustration: MeatIllustration },
-      { word: 'egg', phonetic: '/eɡ/', definition: '鸡蛋', example: 'I eat a boiled egg for breakfast.', illustration: EggIllustration },
-      { word: 'shrimp', phonetic: '/ʃrɪmp/', definition: '虾', example: 'Shrimp is a type of seafood.', illustration: ShrimpIllustration },
-      { word: 'jelly', phonetic: '/ˈdʒeli/', definition: '果冻', example: 'Jelly is a popular dessert for kids.', illustration: JellyIllustration },
-    ],
-  },
-  {
-    id: 'drinks-1',
-    title: '饮料 (Drinks)',
-    description: '学习各种常见饮料的名称。',
-    illustration: DrinksTopicIllustration,
-    theme: 'learn',
-    words: [
-      { word: 'water', phonetic: '/ˈwɔːtər/', definition: '水', example: 'Please drink more water.', illustration: WaterIllustration },
-      { word: 'milk', phonetic: '/mɪlk/', definition: '牛奶', example: 'I drink milk every morning.', illustration: MilkIllustration },
-      { word: 'juice', phonetic: '/dʒuːs/', definition: '果汁', example: 'She likes orange juice.', illustration: JuiceIllustration },
-      { word: 'tea', phonetic: '/tiː/', definition: '茶', example: 'Would you like a cup of tea?', illustration: TeaIllustration },
-      { word: 'coffee', phonetic: '/ˈkɔːfi/', definition: '咖啡', example: 'He needs coffee to wake up.', illustration: CoffeeIllustration },
-      { word: 'soda', phonetic: '/ˈsoʊdə/', definition: '苏打水', example: 'Soda is a sweet, fizzy drink.', illustration: SodaIllustration },
-    ],
-  },
-  {
-    id: 'clothes-1',
-    title: '衣物 (Clothes)',
-    description: '学习常见衣物的名称。',
-    illustration: ClothesTopicIllustration,
-    theme: 'learn',
-    words: [
-      { word: 'shirt', phonetic: '/ʃɜːrt/', definition: '衬衫', example: 'He is wearing a blue shirt.', illustration: ShirtIllustration },
-      { word: 'pants', phonetic: '/pænts/', definition: '裤子', example: 'I need to buy new pants.', illustration: PantsIllustration },
-      { word: 'dress', phonetic: '/dres/', definition: '连衣裙', example: 'She wore a beautiful dress to the party.', illustration: DressIllustration },
-      { word: 'skirt', phonetic: '/skɜːrt/', definition: '裙子', example: 'That is a nice skirt.', illustration: SkirtIllustration },
-      { word: 'shoes', phonetic: '/ʃuːz/', definition: '鞋子', example: 'My new shoes are very comfortable.', illustration: ShoesIllustration },
-      { word: 'hat', phonetic: '/hæt/', definition: '帽子', example: 'He wears a hat in the sun.', illustration: HatIllustration },
-      { word: 'socks', phonetic: '/sɑːks/', definition: '袜子', example: 'Where are my socks?', illustration: SocksIllustration },
-      { word: 'coat', phonetic: '/koʊt/', definition: '外套', example: 'It is cold, you should wear a coat.', illustration: CoatIllustration },
-    ],
-  },
-  {
-    id: 'furniture-1',
-    title: '家具 (Furniture)',
-    description: '学习常见家具的名称。',
-    illustration: FurnitureTopicIllustration,
-    theme: 'learn',
-    words: [
-      { word: 'table', phonetic: '/ˈteɪbəl/', definition: '桌子', example: 'The book is on the table.', illustration: TableIllustration },
-      { word: 'chair', phonetic: '/tʃer/', definition: '椅子', example: 'Please have a seat on this chair.', illustration: ChairIllustration },
-      { word: 'bed', phonetic: '/bed/', definition: '床', example: 'I am tired, I want to go to bed.', illustration: BedIllustration },
-      { word: 'sofa', phonetic: '/ˈsoʊfə/', definition: '沙发', example: 'We are watching TV on the sofa.', illustration: SofaIllustration },
-      { word: 'desk', phonetic: '/desk/', definition: '书桌', example: 'She does her homework at her desk.', illustration: DeskIllustration },
-      { word: 'lamp', phonetic: '/læmp/', definition: '灯', example: 'Turn on the lamp, it is dark.', illustration: LampIllustration },
-      { word: 'bookshelf', phonetic: '/ˈbʊkʃelf/', definition: '书架', example: 'The bookshelf is full of books.', illustration: BookshelfIllustration },
-    ],
-  },
-  {
-    id: 'tableware-1',
-    title: '餐具 (Tableware)',
-    description: '学习常见餐具的名称。',
-    illustration: TablewareTopicIllustration,
-    theme: 'learn',
-    words: [
-      { word: 'bowl', phonetic: '/boʊl/', definition: '碗', example: 'I eat soup from a bowl.', illustration: BowlIllustration },
-      { word: 'plate', phonetic: '/pleɪt/', definition: '盘子', example: 'Put the food on the plate.', illustration: PlateIllustration },
-      { word: 'spoon', phonetic: '/spuːn/', definition: '勺子', example: 'Use a spoon to eat yogurt.', illustration: SpoonIllustration },
-      { word: 'fork', phonetic: '/fɔːrk/', definition: '叉子', example: 'A fork is used for eating salad.', illustration: ForkIllustration },
-      { word: 'knife', phonetic: '/naɪf/', definition: '刀', example: 'Be careful with that sharp knife.', illustration: KnifeIllustration },
-      { word: 'chopsticks', phonetic: '/ˈtʃɑːpstɪks/', definition: '筷子', example: 'Many people in Asia use chopsticks.', illustration: ChopsticksIllustration },
-      { word: 'cup', phonetic: '/kʌp/', definition: '杯子', example: 'I would like a cup of tea.', illustration: CupIllustration },
-      { word: 'glass', phonetic: '/ɡlæs/', definition: '玻璃杯', example: 'She drank a glass of water.', illustration: GlassIllustration },
-    ],
-  },
-  {
-    id: 'stationery-1',
-    title: '文具 (Stationery)',
-    description: '学习常见文具的名称。',
-    illustration: StationeryTopicIllustration,
-    theme: 'learn',
-    words: [
-      { word: 'pen', phonetic: '/pen/', definition: '钢笔', example: 'Please sign with a black pen.', illustration: PenIllustration },
-      { word: 'pencil', phonetic: '/ˈpensəl/', definition: '铅笔', example: 'I need to sharpen my pencil.', illustration: PencilIllustration },
-      { word: 'eraser', phonetic: '/ɪˈreɪsər/', definition: '橡皮', example: 'I made a mistake, I need an eraser.', illustration: EraserIllustration },
-      { word: 'ruler', phonetic: '/ˈruːlər/', definition: '尺子', example: 'Use a ruler to draw a straight line.', illustration: RulerIllustration },
-      { word: 'book', phonetic: '/bʊk/', definition: '书', example: 'He is reading an interesting book.', illustration: BookIllustration },
-      { word: 'notebook', phonetic: '/ˈnoʊtbʊk/', definition: '笔记本', example: 'Write your notes in this notebook.', illustration: NotebookIllustration },
-      { word: 'scissors', phonetic: '/ˈsɪzərz/', definition: '剪刀', example: 'I need scissors to cut the paper.', illustration: ScissorsIllustration },
-      { word: 'glue', phonetic: '/ɡluː/', definition: '胶水', example: 'Use glue to stick the pictures.', illustration: GlueIllustration },
-    ],
-  },
+    title: '自然世界 (Nature)',
+    topics: [
+      {
+        id: 'farm-animals-1',
+        title: '农场动物 (Farm Animals)',
+        description: '认识农场里常见的动物。',
+        illustration: FarmAnimalsTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'cow', phonetic: '/kaʊ/', definition: '奶牛', example: 'The cow eats grass in the field.', illustration: CowIllustration },
+          { word: 'sheep', phonetic: '/ʃiːp/', definition: '绵羊', example: 'A sheep has soft wool.', illustration: SheepIllustration },
+          { word: 'pig', phonetic: '/pɪɡ/', definition: '猪', example: 'The pig likes to play in the mud.', illustration: PigIllustration },
+          { word: 'chicken', phonetic: '/ˈtʃɪkɪn/', definition: '鸡', example: 'A chicken lays eggs.', illustration: ChickenIllustration2 },
+          { word: 'horse', phonetic: '/hɔːrs/', definition: '马', example: 'A horse can run very fast.', illustration: HorseIllustration },
+        ],
+      },
+      {
+        id: 'wild-animals-1',
+        title: '野生动物 (Wild Animals)',
+        description: '探索生活在野外的动物。',
+        illustration: WildAnimalsTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'lion', phonetic: '/ˈlaɪən/', definition: '狮子', example: 'The lion is the king of the jungle.', illustration: LionIllustration },
+          { word: 'tiger', phonetic: '/ˈtaɪɡər/', definition: '老虎', example: 'A tiger has orange and black stripes.', illustration: TigerIllustration },
+          { word: 'bear', phonetic: '/ber/', definition: '熊', example: 'A bear likes to eat honey.', illustration: BearIllustration },
+          { word: 'elephant', phonetic: '/ˈelɪfənt/', definition: '大象', example: 'An elephant has a long trunk.', illustration: ElephantIllustration },
+          { word: 'monkey', phonetic: '/ˈmʌŋki/', definition: '猴子', example: 'The monkey swings from tree to tree.', illustration: MonkeyIllustration },
+        ],
+      },
+      {
+        id: 'insects-1',
+        title: '昆虫 (Insects)',
+        description: '了解常见的小昆虫。',
+        illustration: InsectsTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'bee', phonetic: '/biː/', definition: '蜜蜂', example: 'A bee makes honey.', illustration: BeeIllustration },
+          { word: 'butterfly', phonetic: '/ˈbʌtərflaɪ/', definition: '蝴蝶', example: 'The butterfly has colorful wings.', illustration: ButterflyIllustration },
+          { word: 'ant', phonetic: '/ænt/', definition: '蚂蚁', example: 'An ant is a very small insect.', illustration: AntIllustration },
+          { word: 'ladybug', phonetic: '/ˈleɪdibʌɡ/', definition: '瓢虫', example: 'A ladybug is red with black spots.', illustration: LadybugIllustration },
+        ],
+      },
+      {
+        id: 'sea-animals-1',
+        title: '海洋动物 (Sea Animals)',
+        description: '发现生活在海里的生物。',
+        illustration: SeaAnimalsTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'fish', phonetic: '/fɪʃ/', definition: '鱼', example: 'A fish swims in the water.', illustration: FishIllustration },
+          { word: 'whale', phonetic: '/weɪl/', definition: '鲸鱼', example: 'The blue whale is the largest animal.', illustration: WhaleIllustration },
+          { word: 'dolphin', phonetic: '/ˈdɑːlfɪn/', definition: '海豚', example: 'A dolphin is a very smart animal.', illustration: DolphinIllustration },
+          { word: 'shark', phonetic: '/ʃɑːrk/', definition: '鲨鱼', example: 'A shark has sharp teeth.', illustration: SharkIllustration },
+          { word: 'octopus', phonetic: '/ˈɑːktəpʊs/', definition: '章鱼', example: 'An octopus has eight arms.', illustration: OctopusIllustration },
+        ],
+      },
+      {
+        id: 'dinosaurs-1',
+        title: '恐龙 (Dinosaurs)',
+        description: '回到史前时代认识恐龙。',
+        illustration: DinosaurTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'dinosaur', phonetic: '/ˈdaɪnəsɔːr/', definition: '恐龙', example: 'Dinosaurs lived millions of years ago.', illustration: TRexIllustration },
+          { word: 'T-Rex', phonetic: '/ˈtiː reks/', definition: '霸王龙', example: 'T-Rex was a large meat-eating dinosaur.', illustration: TRexIllustration },
+        ],
+      },
+      {
+        id: 'birds-1',
+        title: '鸟类 (Birds)',
+        description: '学习关于鸟类的词汇。',
+        illustration: BirdsTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'bird', phonetic: '/bɜːrd/', definition: '鸟', example: 'A bird can fly high in the sky.', illustration: BirdIllustration },
+          { word: 'owl', phonetic: '/aʊl/', definition: '猫头鹰', example: 'An owl is active at night.', illustration: BearIllustration },
+          { word: 'penguin', phonetic: '/ˈpeŋɡwɪn/', definition: '企鹅', example: 'A penguin cannot fly, but it can swim.', illustration: BlackIllustration },
+        ],
+      },
+      {
+        id: 'weather-1',
+        title: '天气 (Weather)',
+        description: '学习描述天气的词语。',
+        illustration: WeatherTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'sun', phonetic: '/sʌn/', definition: '太阳', example: 'The sun is shining brightly today.', illustration: SunIllustration },
+          { word: 'cloud', phonetic: '/klaʊd/', definition: '云', example: 'There is a white cloud in the sky.', illustration: CloudIllustration },
+          { word: 'rain', phonetic: '/reɪn/', definition: '雨', example: 'I like the sound of the rain.', illustration: RainIllustration },
+          { word: 'snow', phonetic: '/snoʊ/', definition: '雪', example: 'Let\'s build a snowman in the snow.', illustration: SnowIllustration },
+          { word: 'wind', phonetic: '/wɪnd/', definition: '风', example: 'The wind is blowing the leaves.', illustration: WindIllustration },
+        ],
+      },
+      {
+        id: 'scenery-1',
+        title: '风景 (Scenery)',
+        description: '学习描述自然风光的词语。',
+        illustration: SceneryTopicIllustration,
+        theme: 'learn',
+        words: [
+          { word: 'mountain', phonetic: '/ˈmaʊntn/', definition: '山', example: 'We climbed the tall mountain.', illustration: MountainIllustration },
+          { word: 'river', phonetic: '/ˈrɪvər/', definition: '河', example: 'The boat is on the river.', illustration: RiverIllustration },
+          { word: 'forest', phonetic: '/ˈfɔːrɪst/', definition: '森林', example: 'Many trees grow in the forest.', illustration: ForestIllustration },
+          { word: 'beach', phonetic: '/biːtʃ/', definition: '海滩', example: 'We played on the sandy beach.', illustration: BeachIllustration },
+          { word: 'sky', phonetic: '/skaɪ/', definition: '天空', example: 'The sky is blue and clear.', illustration: SkyIllustration },
+        ],
+      },
+    ]
+  }
 ];
 
-export const initialPart1Data: TopicData[] = [
-    {
-        id: 'box-topic-1',
-        title: '话题: Work & Study',
-        cards: [
-            {
-                id: 'card-1',
-                title: 'Work',
-                category: '人物题',
-                categoryClass: 'person-card',
-                status: 'New',
-                part1Questions: [
-                    'Do you work or are you a student?',
-                    'What do you like about your job?',
-                    'What do you find challenging about your work?',
-                ],
-                sampleAnswers: [
-                    {
-                        question: 'What do you like about your job?',
-                        versions: [
-                            {
-                                score: '5.5',
-                                answer: "I like my job because I can meet many people. It's interesting. I can learn new things.",
-                                analysis: [
-                                    { text: "meet many people", type: 'phrase', explanation: "A simple but relevant reason." },
-                                ]
-                            },
-                            {
-                                score: '7.0',
-                                answer: "The most rewarding aspect of my job is definitely the opportunity to collaborate with a diverse team. It's incredibly stimulating to exchange ideas and learn from my colleagues' different perspectives.",
-                                analysis: [
-                                    { text: "rewarding aspect", type: 'vocab', explanation: "Good vocabulary for expressing positive points." },
-                                    { text: "collaborate with a diverse team", type: 'phrase', explanation: "A well-phrased expression for teamwork." },
-                                    { text: "incredibly stimulating", type: 'phrase', explanation: "Strong collocation to describe the experience." },
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
-];
-
-export const initialPart2Data: TopicData[] = [
-    {
-        id: 'box-topic-p2-1',
-        title: '话题: People',
-        cards: [
-            {
-                id: 'card-p2-1',
-                title: 'Describe a person you admire',
-                category: '人物题',
-                categoryClass: 'person-card',
-                status: 'New',
-                part2Title: 'Describe a person you admire.',
-                part2Description: 'You should say:',
-                part2Prompts: [
-                    'who this person is',
-                    'how you know them',
-                    'what qualities this person has',
-                    'and explain why you admire them.'
-                ],
-                part3Questions: [
-                    'What qualities do leaders have?',
-                    'Do you think celebrities are good role models?',
-                ]
-            }
-        ]
-    }
-];
+export const wordLists: WordList[] = topicCategories.flatMap(category => category.topics);

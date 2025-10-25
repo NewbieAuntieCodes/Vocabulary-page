@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { styled, keyframes } from 'styled-components';
 import { Page } from '../types';
-import { wordLists, WordList } from '../data';
+import { wordLists, WordList, Word } from '../data';
 
 const BackArrowIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12" /><polyline points="12 19 5 12 12 5" /></svg>;
 const PrevIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>;
@@ -11,6 +11,17 @@ const SpeakerIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" hei
 // --- Learning Step Component ---
 const LearnStep: React.FC<{ topic: WordList, onComplete: () => void }> = ({ topic, onComplete }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    // Handle case where words array is empty
+    if (topic.words.length === 0) {
+        return (
+            <StepContainer>
+                <p>没有选择单词！</p>
+                <CompleteButton onClick={onComplete}>返回</CompleteButton>
+            </StepContainer>
+        )
+    }
+    
     const currentWord = topic.words[currentIndex];
 
     const speak = useCallback((text: string) => {
@@ -108,10 +119,10 @@ const LearnStep: React.FC<{ topic: WordList, onComplete: () => void }> = ({ topi
 };
 
 // --- Main Topic Page Component ---
-const LearnPage: React.FC<{ topicId: string, navigateTo: (page: Page) => void }> = ({ topicId, navigateTo }) => {
-    const topic = wordLists.find(list => list.id === topicId);
+const LearnPage: React.FC<{ topicId: string, words: Word[], navigateTo: (page: Page) => void }> = ({ topicId, words, navigateTo }) => {
+    const originalTopic = wordLists.find(list => list.id === topicId);
 
-    if (!topic) {
+    if (!originalTopic) {
         return (
             <PageContainer>
                 <p>主题未找到！</p>
@@ -119,6 +130,16 @@ const LearnPage: React.FC<{ topicId: string, navigateTo: (page: Page) => void }>
             </PageContainer>
         );
     }
+
+    const activityTopic: WordList = { ...originalTopic, words };
+
+    const handleComplete = () => {
+        if (words && words.length > 0) {
+            navigateTo('practice');
+        } else {
+            navigateTo('home');
+        }
+    };
     
     return (
         <PageContainer>
@@ -126,10 +147,10 @@ const LearnPage: React.FC<{ topicId: string, navigateTo: (page: Page) => void }>
                 <BackButton onClick={() => navigateTo('home')} aria-label="返回主页">
                     <BackArrowIcon />
                 </BackButton>
-                <h1>{topic.title}</h1>
+                <h1>{activityTopic.title}</h1>
             </PageHeader>
             <main>
-                <LearnStep topic={topic} onComplete={() => navigateTo('practice')} />
+                <LearnStep topic={activityTopic} onComplete={handleComplete} />
             </main>
         </PageContainer>
     );

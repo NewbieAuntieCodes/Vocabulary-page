@@ -225,7 +225,7 @@ const CopyButton = styled.button`
 
 const CopyStatus = styled.span`
     font-size: 0.9rem;
-    color: ${({ theme }) => theme.colors.placeText};
+    color: ${({ theme }) => theme.colors.learn};
     font-weight: 500;
 `;
 

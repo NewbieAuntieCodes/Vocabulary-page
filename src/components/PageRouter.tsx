@@ -3,13 +3,17 @@ import HomePage from '../pages/HomePage';
 import LearnPage from '../pages/LearnPage';
 import PracticePage from '../pages/PracticePage';
 import MyWordsPage from '../pages/MyWordsPage';
+import WordSelectionPage from '../pages/WordSelectionPage';
 import { Page } from '../types';
+import { Word } from '../data';
 
 interface PageRouterProps {
     page: Page;
     navigateTo: (page: Page) => void;
-    navigateToActivity: (topicId: string, page: Page) => void;
+    navigateToWordSelection: (topicId: string) => void;
+    onStartActivity: (page: 'learn' | 'practice', words: Word[]) => void;
     activeTopicId: string | null;
+    activityWords: Word[] | null;
     vocabulary: string[];
     handleAddWord: (word: string) => void;
     handleDeleteWord: (word: string) => void;
@@ -20,21 +24,31 @@ interface PageRouterProps {
 const PageRouter: React.FC<PageRouterProps> = ({ 
     page, 
     navigateTo, 
-    navigateToActivity,
+    navigateToWordSelection,
+    onStartActivity,
     activeTopicId,
+    activityWords,
     vocabulary,
     handleDeleteWord,
     handleClearVocabulary
 }) => {
     switch (page) {
+        case 'word-selection':
+            return <WordSelectionPage
+                        topicId={activeTopicId!}
+                        navigateTo={navigateTo}
+                        onStartActivity={onStartActivity}
+                    />;
         case 'learn':
             return <LearnPage 
                         topicId={activeTopicId!} 
+                        words={activityWords!}
                         navigateTo={navigateTo} 
                     />;
         case 'practice':
             return <PracticePage
                         topicId={activeTopicId!}
+                        words={activityWords!}
                         navigateTo={navigateTo}
                     />;
         case 'my-words':
@@ -46,7 +60,7 @@ const PageRouter: React.FC<PageRouterProps> = ({
                     />;
         case 'home':
         default:
-            return <HomePage navigateToActivity={navigateToActivity} />;
+            return <HomePage navigateToWordSelection={navigateToWordSelection} />;
     }
 };
 

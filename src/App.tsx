@@ -5,6 +5,7 @@ import Toast from './components/Toast';
 import VocabularyFab from './components/VocabularyFab';
 import SelectionAddButton from './components/SelectionAddButton';
 import PageRouter from './components/PageRouter';
+import { Word } from './data';
 
 import { theme, GlobalStyles } from './theme';
 import { useVocabulary } from './hooks/useVocabulary';
@@ -24,6 +25,7 @@ const AppWrapper = styled.div`
 const App: React.FC = () => {
     const [page, setPage] = useState<Page>('home');
     const [activeTopicId, setActiveTopicId] = useState<string | null>(null);
+    const [activityWords, setActivityWords] = useState<Word[] | null>(null);
 
     const {
         vocabulary,
@@ -39,14 +41,21 @@ const App: React.FC = () => {
     const navigateTo = (targetPage: Page) => {
         window.scrollTo(0, 0); // Scroll to top on page change
         setPage(targetPage);
-         if (targetPage !== 'learn' && targetPage !== 'practice') {
+         if (targetPage === 'home') {
             setActiveTopicId(null);
+            setActivityWords(null);
         }
     };
 
-    const navigateToActivity = (topicId: string, activityPage: Page) => {
+    const navigateToWordSelection = (topicId: string) => {
         window.scrollTo(0, 0);
         setActiveTopicId(topicId);
+        setPage('word-selection');
+    };
+    
+    const handleStartActivity = (activityPage: 'learn' | 'practice', words: Word[]) => {
+        window.scrollTo(0, 0);
+        setActivityWords(words);
         setPage(activityPage);
     };
 
@@ -58,8 +67,10 @@ const App: React.FC = () => {
                 <PageRouter 
                     page={page}
                     navigateTo={navigateTo}
-                    navigateToActivity={navigateToActivity}
+                    navigateToWordSelection={navigateToWordSelection}
+                    onStartActivity={handleStartActivity}
                     activeTopicId={activeTopicId}
+                    activityWords={activityWords}
                     vocabulary={vocabulary}
                     handleAddWord={handleAddWord}
                     handleDeleteWord={handleDeleteWord}

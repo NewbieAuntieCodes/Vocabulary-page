@@ -1,6 +1,5 @@
-// FIX: Removed the redundant side-effect import for 'styled-components'.
-// The file is already a module because of other imports and exports, and removing this line
-// resolves the module augmentation error.
+// FIX: Added a side-effect import for 'styled-components' to ensure the module's types are available for augmentation.
+import 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 
 export const theme = {
@@ -16,10 +15,8 @@ export const theme = {
         // Brand & Accent Colors
         primary: '#6D55FF', // Indigo
         primaryLight: '#F3F0FF',
-        // FIX: Add missing color definitions.
         primaryBlue: '#3498db',
         primaryOrange: '#e67e22',
-        shadow: 'rgba(0, 0, 0, 0.08)',
 
         // Section specific colors
         learn: '#00C49A', // Green
@@ -29,43 +26,11 @@ export const theme = {
 
         // Status colors
         primaryRed: '#e74c3c',
+        newTag: '#e74c3c',
 
         // Compatibility colors from old theme
         highlightBg: '#e9f2ff',
         highlightBorder: '#c7dfff',
-        dragOverBorder: '#6D55FF',
-        newTag: '#e74c3c',
-        cardYellowBg: '#fef9e7',
-        person: '#3498db',
-        personBg: 'rgba(52, 152, 219, 0.1)',
-        personText: '#2980b9',
-        event: '#9b59b6',
-        eventBg: 'rgba(155, 89, 182, 0.1)',
-        place: '#2ecc71',
-        placeBg: 'rgba(46, 204, 113, 0.1)',
-        placeText: '#27ae60',
-        object: '#e67e22',
-        objectBg: 'rgba(230, 126, 34, 0.1)',
-        analysisVocab: '#e67e22',
-        analysisPhrase: '#9b59b6',
-        analysisSentence: '#3498db',
-        analysisVocabBg: 'rgba(230, 126, 34, 0.1)',
-        analysisPhraseBg: 'rgba(155, 89, 182, 0.1)',
-        // FIX: Corrected typo in RGB value from 219 to 152.
-        analysisSentenceBg: 'rgba(52, 152, 219, 0.1)',
-        what: '#3498db',
-        where: '#2ecc71',
-        when: '#f1c40f',
-        why: '#9b59b6',
-        whyNot: '#e74c3c',
-        how: '#e67e22',
-        who: '#1abc9c',
-        point: '#3498db',
-        reason: '#e67e22',
-        example: '#27ae60',
-        analysisPointBg: 'rgba(52, 152, 219, 0.1)',
-        analysisReasonBg: 'rgba(230, 126, 34, 0.1)',
-        analysisExampleBg: 'rgba(39, 174, 96, 0.1)',
     },
     fonts: {
         body: "'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",

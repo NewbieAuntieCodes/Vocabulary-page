@@ -2,19 +2,24 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# 词汇乐园 - Vocabulary Wonderland
 
-This contains everything you need to run your app locally.
+A fun and interactive web application to help users learn new vocabulary across various topics.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1Kh--Ju9TzocORsEDHSVSZwqeLtC97aWA
+## Features
+
+-   **Themed Vocabulary Lists:** Explore words related to colors, numbers, food, nature, and more.
+-   **Interactive Learning:** View flashcards with illustrations, definitions, and example sentences.
+-   **Practice Mode:** Test your knowledge with fun quizzes like "match the word to the image" and "listen and choose".
+-   **Personal Word Bank:** Double-click any word on the site to add it to your personal vocabulary list.
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:** Node.js
 
+1.  Install dependencies:
+    `npm install`
+2.  Run the app:
+    `npm run dev`
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+The app will be available at `http://localhost:5173` (or another port if 5173 is busy).
