@@ -1,5 +1,5 @@
-// FIX: Added a side-effect import for 'styled-components' to ensure the module's types are available for augmentation.
-import 'styled-components';
+// FIX: Removed the redundant side-effect import for 'styled-components'.
+// The named import of `createGlobalStyle` is sufficient for module augmentation.
 import { createGlobalStyle } from 'styled-components';
 
 export const theme = {

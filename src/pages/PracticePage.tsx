@@ -144,7 +144,8 @@ const Game: React.FC<GameProps> = ({ topic, gameMode, onGameChange }) => {
 
             {gameMode === 'image' ? (
                 <ImagePromptContainer>
-                    {currentQuestion.word.illustration ? <currentQuestion.word.illustration /> : <span>No Image</span>}
+                    {currentQuestion.word.illustration ? <IllustrationWrapper><currentQuestion.word.illustration /></IllustrationWrapper> : <span>No Image</span>}
+                    <ChineseHintText>{currentQuestion.word.definition}</ChineseHintText>
                 </ImagePromptContainer>
             ) : (
                 <ListenPromptContainer>
@@ -339,10 +340,41 @@ const ImagePromptContainer = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
+    gap: 2rem;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        flex-direction: column;
+        gap: 0.5rem;
+        height: auto;
+        min-height: 200px;
+    }
+`;
+
+const IllustrationWrapper = styled.div`
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
     
     svg {
-        max-width: 100%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        width: 120px;
+        height: 120px;
+    }
+`;
+
+const ChineseHintText = styled.p`
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: ${({ theme }) => theme.colors.header};
+    margin: 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        font-size: 1.75rem;
+        margin-top: 0.5rem;
     }
 `;
 
