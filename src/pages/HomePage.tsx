@@ -1,25 +1,9 @@
 import React from 'react';
 import { styled } from 'styled-components';
-import { topicCategories } from '../data';
-import { Page } from '../types';
+import { ieltsTopics } from '../data';
 
-const HeroIllustration = () => (
-    <svg width="450" height="300" viewBox="0 0 450 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="225" cy="150" r="145" fill="url(#hero-gradient)" />
-        <path d="M155 240 C 180 200, 220 180, 250 190" stroke="#FFFFFF" strokeWidth="6" strokeLinecap="round" />
-        <path d="M280 140 Q 320 120, 340 160" stroke="#FFFFFF" strokeWidth="6" strokeLinecap="round" />
-        <rect x="120" y="100" width="80" height="120" rx="10" fill="#FFFFFF" opacity="0.8" transform="rotate(-15 120 100)" />
-        <text x="145" y="165" fontFamily="sans-serif" fontSize="20" fill="#6D55FF" transform="rotate(-15 145 165)" fontWeight="bold">A</text>
-        <circle cx="300" cy="220" r="25" fill="#FFAB00" />
-        <circle cx="110" cy="210" r="15" fill="#F52F70" />
-        <defs>
-            <linearGradient id="hero-gradient" x1="225" y1="5" x2="225" y2="295" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#6D55FF" />
-                <stop offset="1" stopColor="#A855FF" />
-            </linearGradient>
-        </defs>
-    </svg>
-);
+const PlusIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>;
+const EditIcon = () => <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>;
 
 interface HomePageProps {
     navigateToWordSelection: (topicId: string) => void;
@@ -28,180 +12,155 @@ interface HomePageProps {
 const HomePage: React.FC<HomePageProps> = ({ navigateToWordSelection }) => {
     return (
         <HomeContainer>
-            <HeroSection>
-                <HeroText>
-                    <h1>欢迎来到词汇乐园</h1>
-                    <p>选择一个喜欢的主题，开启你的单词探险之旅吧！</p>
-                </HeroText>
-                <HeroIllustrationWrapper>
-                    <HeroIllustration />
-                </HeroIllustrationWrapper>
-            </HeroSection>
-            {topicCategories.map(category => (
-                <CategorySection key={category.title}>
-                    <CategoryTitle>{category.title}</CategoryTitle>
-                    <TopicsGrid>
-                        {category.topics.map(list => (
-                            <TopicCard key={list.id} onClick={() => navigateToWordSelection(list.id)} $theme={list.theme}>
-                                <IllustrationContainer>
-                                    {list.illustration && <list.illustration />}
-                                </IllustrationContainer>
-                                <CardContent>
-                                    <h2>{list.title}</h2>
-                                    <p>{list.description}</p>
-                                </CardContent>
-                            </TopicCard>
-                        ))}
-                    </TopicsGrid>
-                </CategorySection>
-            ))}
+            <TopicsGrid>
+                {ieltsTopics.map(category => (
+                    <TopicColumn key={category.title}>
+                        <ColumnHeader>
+                            <span>{category.title}</span>
+                            <HeaderActions>
+                                <ActionButton aria-label="Add new topic"><PlusIcon /></ActionButton>
+                                <ActionButton aria-label="Edit topic"><EditIcon /></ActionButton>
+                            </HeaderActions>
+                        </ColumnHeader>
+                        <SubTopicList>
+                            {category.subTopics.map(subTopic => (
+                                <SubTopicCard key={subTopic.id} onClick={() => navigateToWordSelection(subTopic.id)}>
+                                    <CardBody>
+                                        <Tag $color={subTopic.color}>{subTopic.type}</Tag>
+                                        <CardTitle>{subTopic.title}</CardTitle>
+                                    </CardBody>
+                                    <NewBadge>New</NewBadge>
+                                </SubTopicCard>
+                            ))}
+                        </SubTopicList>
+                    </TopicColumn>
+                ))}
+            </TopicsGrid>
         </HomeContainer>
     );
 };
 
 const HomeContainer = styled.div`
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
+    width: 100%;
     animation: fadeIn 0.5s ease;
 `;
 
-const HeroSection = styled.header`
+const TopicsGrid = styled.div`
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+
+    @media (max-width: 1024px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        grid-template-columns: 1fr;
+    }
+`;
+
+const TopicColumn = styled.section`
+    flex: 1;
+    min-width: 250px;
+    background-color: ${({ theme }) => theme.colors.columnBg};
+    border-radius: 16px;
+    padding: 0.75rem;
+`;
+
+const ColumnHeader = styled.header`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem 1rem;
+    color: ${({ theme }) => theme.colors.header};
+    font-weight: 600;
+`;
+
+const HeaderActions = styled.div`
+    display: flex;
+    gap: 0.5rem;
+`;
+
+const ActionButton = styled.button`
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: ${({ theme }) => theme.colors.label};
+    padding: 0.25rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    text-align: left;
-    margin-bottom: 4rem;
-    padding: 2rem 0;
-
-    @media (max-width: 800px) {
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-`;
-
-const HeroText = styled.div`
-    max-width: 500px;
-    h1 {
-        font-size: 3.5rem;
-        font-weight: 700;
-        color: ${({ theme }) => theme.colors.header};
-        margin-bottom: 1rem;
-        line-height: 1.2;
-    }
-
-    p {
-        font-size: 1.25rem;
-        color: ${({ theme }) => theme.colors.label};
-        margin-top: 0;
-        max-width: 40ch;
-    }
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        h1 {
-            font-size: 2.5rem;
-        }
-        p {
-            font-size: 1.1rem;
-        }
-    }
-`;
-
-const HeroIllustrationWrapper = styled.div`
-    @media (max-width: 800px) {
-        margin-top: 2rem;
-        svg {
-            width: 300px;
-            height: 200px;
-        }
-    }
-`;
-
-const CategorySection = styled.section`
-    margin-bottom: 4rem;
-
-    &:last-of-type {
-        margin-bottom: 2rem;
-    }
-`;
-
-const CategoryTitle = styled.h2`
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: ${({ theme }) => theme.colors.header};
-    margin-bottom: 2rem;
-    text-align: left;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.border};
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        font-size: 1.75rem;
-        margin-bottom: 1.5rem;
-    }
-`;
-
-const TopicsGrid = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        gap: 1.5rem;
-    }
-`;
-
-const IllustrationContainer = styled.div`
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 1.5rem;
-    background-color: #f8f9fa;
-`;
-
-const CardContent = styled.div`
-    text-align: left;
-`;
-
-const TopicCard = styled.div<{ $theme: 'learn' | 'practice' | 'games' }>`
-    background-color: ${({ theme }) => theme.colors.cardBg};
-    border-radius: 24px;
-    padding: 1.5rem;
-    box-shadow: ${({ theme }) => theme.shadows.subtle};
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid ${({ theme }) => theme.colors.border};
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
+    border-radius: 4px;
 
     &:hover {
-        transform: translateY(-8px);
-        box-shadow: ${({ $theme, theme }) => {
-            const hoverColor = theme.colors[$theme];
-            return `0 10px 20px 0 ${hoverColor}26`;
-        }};
+        color: ${({ theme }) => theme.colors.header};
     }
-    
-    h2 {
-        font-size: 1.75rem;
-        font-weight: 600;
-        color: ${({ $theme, theme }) => theme.colors[$theme]};
-        margin: 0 0 0.5rem 0;
-    }
+`;
 
-    p {
-        font-size: 1rem;
-        color: ${({ theme }) => theme.colors.label};
-        line-height: 1.6;
-        margin: 0;
-        flex-grow: 1;
-    }
+const SubTopicList = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+`;
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        padding: 1.5rem;
-        h2 {
-            font-size: 1.5rem;
+const SubTopicCard = styled.div`
+    background-color: ${({ theme }) => theme.colors.cardBg};
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid ${({ theme }) => theme.colors.cardBg};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+        border-color: #dbe2f4;
+    }
+`;
+
+const CardBody = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+`;
+
+const CardTitle = styled.span`
+    font-weight: 500;
+    color: ${({ theme }) => theme.colors.text};
+`;
+
+const Tag = styled.span<{ $color: 'yellow' | 'blue' | 'green' | 'purple' }>`
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+
+    ${({ theme, $color }) => {
+        switch ($color) {
+            case 'yellow':
+                return `background-color: ${theme.colors.tagYellowBg}; color: ${theme.colors.tagYellowText};`;
+            case 'blue':
+                return `background-color: ${theme.colors.tagBlueBg}; color: ${theme.colors.tagBlueText};`;
+            case 'green':
+                return `background-color: ${theme.colors.tagGreenBg}; color: ${theme.colors.tagGreenText};`;
+            case 'purple':
+                return `background-color: ${theme.colors.tagPurpleBg}; color: ${theme.colors.tagPurpleText};`;
         }
-    }
+    }}
+`;
+
+const NewBadge = styled.span`
+    background-color: ${({ theme }) => theme.colors.newBadgeBg};
+    color: ${({ theme }) => theme.colors.newBadgeText};
+    padding: 0.15rem 0.5rem;
+    border-radius: 99px;
+    font-size: 0.7rem;
+    font-weight: 700;
 `;
 
 export default HomePage;

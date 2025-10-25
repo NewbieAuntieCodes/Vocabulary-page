@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { styled, keyframes, css } from 'styled-components';
 import { Page } from '../types';
-import { wordLists, WordList, Word } from '../data';
+import { allSubTopics, SubTopic, Word } from '../data';
 
 type GameMode = 'image' | 'listening';
 
@@ -18,7 +18,7 @@ interface Question {
     options: string[];
 }
 
-const createGameQuestions = (topic: WordList): Question[] => {
+const createGameQuestions = (topic: SubTopic): Question[] => {
     const shuffledWords = shuffleArray([...topic.words]);
     return shuffledWords.map(correctWord => {
         const otherWords = topic.words.filter(w => w.word !== correctWord.word);
@@ -46,7 +46,7 @@ const speak = (text: string) => {
 
 
 interface GameProps {
-    topic: WordList;
+    topic: SubTopic;
     gameMode: GameMode;
     onGameChange: (mode: GameMode) => void;
 }
@@ -143,9 +143,7 @@ const Game: React.FC<GameProps> = ({ topic, gameMode, onGameChange }) => {
             </ProgressBarContainer>
 
             {gameMode === 'image' ? (
-                <ImagePromptContainer>
-                    {currentQuestion.word.illustration ? <currentQuestion.word.illustration /> : <span>No Image</span>}
-                </ImagePromptContainer>
+                 <QuestionPrompt>{currentQuestion.word.definition}</QuestionPrompt>
             ) : (
                 <ListenPromptContainer>
                     <ListenButton onClick={() => speak(currentQuestion.word.word)} aria-label="Play sound">
@@ -172,8 +170,8 @@ const Game: React.FC<GameProps> = ({ topic, gameMode, onGameChange }) => {
 
 
 const PracticePage: React.FC<{ topicId: string, words: Word[], navigateTo: (page: Page) => void }> = ({ topicId, words, navigateTo }) => {
-    const [gameMode, setGameMode] = useState<GameMode>('image');
-    const originalTopic = wordLists.find(list => list.id === topicId);
+    const [gameMode, setGameMode] = useState<GameMode>('listening');
+    const originalTopic = allSubTopics.find(list => list.id === topicId);
 
     if (!originalTopic) {
         return (
@@ -184,7 +182,7 @@ const PracticePage: React.FC<{ topicId: string, words: Word[], navigateTo: (page
         );
     }
     
-    const activityTopic: WordList = { ...originalTopic, words };
+    const activityTopic: SubTopic = { ...originalTopic, words };
 
     return (
         <PageContainer>
@@ -197,7 +195,7 @@ const PracticePage: React.FC<{ topicId: string, words: Word[], navigateTo: (page
             <main>
                 <GameTabs>
                     <TabButton $active={gameMode === 'image'} onClick={() => setGameMode('image')}>
-                        <ImageIcon /> 看图识词
+                        <ImageIcon /> 看词识义
                     </TabButton>
                     <TabButton $active={gameMode === 'listening'} onClick={() => setGameMode('listening')}>
                         <SoundIcon /> 听音辨词
@@ -332,21 +330,27 @@ const ProgressBar = styled.div`
     transition: width 0.3s ease;
 `;
 
-const ImagePromptContainer = styled.div`
+const QuestionPrompt = styled.div`
     width: 100%;
     height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
-    
-    svg {
-        max-width: 100%;
-        max-height: 100%;
-    }
+    font-size: 2rem;
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.header};
+    text-align: center;
 `;
 
-const ListenPromptContainer = styled(ImagePromptContainer)``;
+const ListenPromptContainer = styled.div`
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+`;
 
 const ListenButton = styled.button`
     background-color: ${({ theme }) => theme.colors.primaryLight};

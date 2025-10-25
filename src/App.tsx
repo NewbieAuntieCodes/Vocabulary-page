@@ -14,7 +14,7 @@ const AppWrapper = styled.div`
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-    background-color: ${({ theme }) => theme.colors.bg};
+    background-color: transparent;
     min-height: 100vh;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {

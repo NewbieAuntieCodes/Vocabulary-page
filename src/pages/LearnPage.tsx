@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { styled, keyframes } from 'styled-components';
 import { Page } from '../types';
-import { wordLists, WordList, Word } from '../data';
+import { allSubTopics, SubTopic, Word } from '../data';
 
 const BackArrowIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12" /><polyline points="12 19 5 12 12 5" /></svg>;
 const PrevIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>;
@@ -9,7 +9,7 @@ const NextIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height
 const SpeakerIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>;
 
 // --- Learning Step Component ---
-const LearnStep: React.FC<{ topic: WordList, onComplete: () => void }> = ({ topic, onComplete }) => {
+const LearnStep: React.FC<{ topic: SubTopic, onComplete: () => void }> = ({ topic, onComplete }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     // Handle case where words array is empty
@@ -89,11 +89,6 @@ const LearnStep: React.FC<{ topic: WordList, onComplete: () => void }> = ({ topi
     return (
         <StepContainer>
             <Flashcard>
-                {currentWord.illustration && 
-                    <IllustrationContainer>
-                        <currentWord.illustration />
-                    </IllustrationContainer>
-                }
                 <WordDetails>
                     <WordRow>
                         <WordText>{currentWord.word}</WordText>
@@ -120,7 +115,7 @@ const LearnStep: React.FC<{ topic: WordList, onComplete: () => void }> = ({ topi
 
 // --- Main Topic Page Component ---
 const LearnPage: React.FC<{ topicId: string, words: Word[], navigateTo: (page: Page) => void }> = ({ topicId, words, navigateTo }) => {
-    const originalTopic = wordLists.find(list => list.id === topicId);
+    const originalTopic = allSubTopics.find(list => list.id === topicId);
 
     if (!originalTopic) {
         return (
@@ -131,7 +126,7 @@ const LearnPage: React.FC<{ topicId: string, words: Word[], navigateTo: (page: P
         );
     }
 
-    const activityTopic: WordList = { ...originalTopic, words };
+    const activityTopic: SubTopic = { ...originalTopic, words };
 
     const handleComplete = () => {
         if (words && words.length > 0) {
@@ -230,20 +225,6 @@ const Flashcard = styled.div`
     overflow: hidden;
     display: flex;
     flex-direction: column;
-`;
-
-const IllustrationContainer = styled.div`
-    background-color: #ced4da;
-    padding: 2rem;
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    svg {
-        max-width: 100%;
-        max-height: 100%;
-    }
 `;
 
 const WordDetails = styled.div`
