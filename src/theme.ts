@@ -1,12 +1,11 @@
-// The 'styled-components' module must be imported for type augmentation to work.
-// FIX: Use a named import to ensure TypeScript can find the module for augmentation.
+// FIX: Added a side-effect import for 'styled-components' to ensure the module's types are available for augmentation.
+import 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 
 export const theme = {
     colors: {
-        bg: 'transparent',
+        bg: '#F7F8FC',
         cardBg: '#FFFFFF',
-        columnBg: '#F0F3F9',
         boxBg: '#F1F3F5',
         text: '#4F5A77',
         header: '#1B264F',
@@ -28,19 +27,6 @@ export const theme = {
         // Status colors
         primaryRed: '#e74c3c',
         newTag: '#e74c3c',
-
-        // Tag Colors
-        tagYellowText: '#D68400',
-        tagYellowBg: '#FFFBE6',
-        tagGreenText: '#1D8A5A',
-        tagGreenBg: '#E9F9F2',
-        tagBlueText: '#3478C2',
-        tagBlueBg: '#EBF3FB',
-        tagPurpleText: '#7B4DAB',
-        tagPurpleBg: '#F5F0FA',
-        
-        newBadgeText: '#C55A11',
-        newBadgeBg: '#FDEBDD',
 
         // Compatibility colors from old theme
         highlightBg: '#e9f2ff',
@@ -66,8 +52,7 @@ declare module 'styled-components' {
 
 export const GlobalStyles = createGlobalStyle`
     body {
-        background: linear-gradient(to bottom right, #f0f3ff, #ffffff);
-        background-attachment: fixed;
+        background-color: ${({ theme }) => theme.colors.bg};
         color: ${({ theme }) => theme.colors.text};
         margin: 0;
         font-family: ${({ theme }) => theme.fonts.body};

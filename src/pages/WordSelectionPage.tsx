@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { styled, keyframes } from 'styled-components';
 import { Page } from '../types';
-import { allSubTopics, Word } from '../data';
+import { wordLists, Word } from '../data';
 
 const BackArrowIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12" /><polyline points="12 19 5 12 12 5" /></svg>;
 
@@ -15,7 +15,7 @@ interface WordSelectionPageProps {
 }
 
 const WordSelectionPage: React.FC<WordSelectionPageProps> = ({ topicId, navigateTo, onStartActivity }) => {
-    const topic = useMemo(() => allSubTopics.find(list => list.id === topicId), [topicId]);
+    const topic = useMemo(() => wordLists.find(list => list.id === topicId), [topicId]);
     const [selectedWords, setSelectedWords] = useState<Word[]>([]);
 
     useEffect(() => {

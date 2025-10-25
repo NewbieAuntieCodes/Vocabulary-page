@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { styled, keyframes } from 'styled-components';
 import { Page } from '../types';
-import { allSubTopics, SubTopic } from '../data';
+import { wordLists, WordList } from '../data';
 
 interface CardData {
     id: number;
@@ -19,7 +19,7 @@ const shuffleArray = <T,>(array: T[]): T[] => {
     return array.sort(() => Math.random() - 0.5);
 };
 
-const createGameCards = (wordList: SubTopic): CardData[] => {
+const createGameCards = (wordList: WordList): CardData[] => {
     const cards: CardData[] = [];
     wordList.words.forEach((word, index) => {
         cards.push({ id: index * 2, type: 'word', content: word.word, matchId: index, status: 'hidden' });
@@ -29,14 +29,14 @@ const createGameCards = (wordList: SubTopic): CardData[] => {
 };
 
 const GamesPage: React.FC<{ navigateTo: (page: Page) => void }> = ({ navigateTo }) => {
-    const [activeListId, setActiveListId] = useState<string>(allSubTopics[0].id);
+    const [activeListId, setActiveListId] = useState<string>(wordLists[0].id);
     const [cards, setCards] = useState<CardData[]>([]);
     const [selectedCards, setSelectedCards] = useState<CardData[]>([]);
     const [isChecking, setIsChecking] = useState(false);
     const [gameState, setGameState] = useState<'playing' | 'won'>('playing');
 
     const resetGame = (listId: string) => {
-        const list = allSubTopics.find(l => l.id === listId);
+        const list = wordLists.find(l => l.id === listId);
         if (list) {
             setCards(createGameCards(list));
         }
@@ -99,7 +99,7 @@ const GamesPage: React.FC<{ navigateTo: (page: Page) => void }> = ({ navigateTo 
         setSelectedCards([...selectedCards, clickedCard]);
     };
 
-    const activeList = allSubTopics.find(l => l.id === activeListId);
+    const activeList = wordLists.find(l => l.id === activeListId);
 
     return (
         <PageContainer>
@@ -112,7 +112,7 @@ const GamesPage: React.FC<{ navigateTo: (page: Page) => void }> = ({ navigateTo 
             <GameSetup>
                 <p>选择一个词汇表开始游戏：</p>
                 <ListSelector>
-                    {allSubTopics.map(list => (
+                    {wordLists.map(list => (
                         <ListButton key={list.id} $active={list.id === activeListId} onClick={() => resetGame(list.id)}>
                             {list.title}
                         </ListButton>
@@ -298,7 +298,7 @@ const CardFace = styled.div<{ $isFront: boolean; $type?: 'word' | 'definition'; 
     }
     
     ${({ $type, theme }) => $type === 'word' && `color: ${theme.colors.games};`}
-    ${({ $type, theme }) => $type === 'definition' && `color: ${theme.colors.header}; font-size: 1rem;`}
+    ${({ $type, theme }) => $type === 'definition' && `color: ${theme.colors.header}; font-size: 1.5rem;`}
     
     ${({ $isMatched, theme }) => $isMatched && `
         background-color: #E6F8F2;
